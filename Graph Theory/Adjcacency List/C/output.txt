@@ -1,0 +1,7 @@
+Adjacency List -
+
+adjacencyList[1] -> 5 -> 4 -> 3 -> 2 -> NULL
+adjacencyList[2] -> 5 -> 4 -> 3 -> 1 -> NULL
+adjacencyList[3] -> 5 -> 4 -> 2 -> 1 -> NULL
+adjacencyList[4] -> 5 -> 3 -> 2 -> 1 -> NULL
+adjacencyList[5] -> 4 -> 3 -> 2 -> 1 -> NULL
