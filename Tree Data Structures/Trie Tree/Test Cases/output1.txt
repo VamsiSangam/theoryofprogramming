@@ -1,0 +1,32 @@
+Enter the number of words-
+9
+face
+facebook
+facets
+this
+those
+there
+their
+them
+these
+
+face -> @ index -> 1,
+facebook -> @ index -> 2,
+facets -> @ index -> 3,
+their -> @ index -> 7,
+them -> @ index -> 8,
+there -> @ index -> 6,
+these -> @ index -> 9,
+this -> @ index -> 4,
+those -> @ index -> 5,
+
+Enter the Word to be removed - this
+
+face -> @ index -> 1,
+facebook -> @ index -> 2,
+facets -> @ index -> 3,
+their -> @ index -> 7,
+them -> @ index -> 8,
+there -> @ index -> 6,
+these -> @ index -> 9,
+those -> @ index -> 5,
