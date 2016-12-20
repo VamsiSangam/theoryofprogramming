@@ -1,0 +1,37 @@
+Enter the Number of Vertices -
+6
+Enter the Number of Edges -
+9
+Enter the edges -
+
+1 4 4
+2 1 2
+2 4 4
+2 3 4
+3 5 2
+4 5 2
+4 6 1
+5 2 2
+6 5 -2
+
+Adjacency List -
+
+adjacency_list[1] -> (4, 4) -> NULL
+adjacency_list[2] -> (3, 4) -> (4, 4) -> (1, 2) -> NULL
+adjacency_list[3] -> (5, 2) -> NULL
+adjacency_list[4] -> (6, 1) -> (5, 2) -> NULL
+adjacency_list[5] -> (2, 2) -> NULL
+adjacency_list[6] -> (5, -2) -> NULL
+
+Enter a Start Vertex -
+1
+No Negative Cycles exist in the Graph -
+
+
+Vertex  Shortest Distance to Vertex 1   Parent Vertex -
+1       0                               0
+2       5                               5
+3       9                               2
+4       4                               1
+5       3                               6
+6       5                               4
