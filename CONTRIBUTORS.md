@@ -1,4 +1,4 @@
 Contributors
 ============
 
-* [Vamsi Sangam](https://github.com/VamsiSangam) <vamsisangam@live.com>
+* [Vamsi Sangam](https://github.com/VamsiSangam)
