@@ -4,6 +4,7 @@ Theory of Programming
 
 Dynamic Programming - Kadane's Algorithm
 http://theoryofprogramming.com/2016/10/21/dynamic-programming-kadanes-algorithm/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

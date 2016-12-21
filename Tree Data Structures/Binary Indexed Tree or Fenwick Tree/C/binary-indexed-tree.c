@@ -4,6 +4,7 @@ Theory of Programming
 
 Generating Binary Indexed Tree (BIT) or Fenwick Tree
 http://theoryofprogramming.com/2014/12/24/binary-indexed-tree-or-fenwick-tree/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

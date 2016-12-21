@@ -4,6 +4,7 @@ Theory of Programming
 
 Segment Tree Data Structure
 http://theoryofprogramming.com/2015/01/27/segment-trees/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

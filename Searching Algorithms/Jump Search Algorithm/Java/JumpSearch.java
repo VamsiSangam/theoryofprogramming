@@ -4,6 +4,7 @@ Theory of Programming
 
 Jump Search Algorithm
 http://theoryofprogramming.com/2016/11/10/jump-search-algorithm/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

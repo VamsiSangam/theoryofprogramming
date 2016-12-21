@@ -4,6 +4,7 @@ Theory of Programming
 
 Merge Sort Algorithm
 http://theoryofprogramming.com/2015/01/29/merge-sort-algorithm/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

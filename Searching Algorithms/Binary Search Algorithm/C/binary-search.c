@@ -4,6 +4,7 @@ Theory of Programming
 
 Binary Search Algorithm
 http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */

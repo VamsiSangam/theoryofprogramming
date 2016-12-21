@@ -4,6 +4,7 @@ Theory of Programming
 
 Quick sort algorithm with Dijksrta's 3-way paritioning
 http://theoryofprogramming.com/2015/01/20/quick-sort-algorithm/
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */
