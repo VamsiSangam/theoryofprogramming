@@ -10,5 +10,6 @@ The most common and impactful contribution which you can make is to provide impl
 * Ask doubts in your pull request or the issue page corresponding to your contribution.
 * Please follow the directory structure strictly.
 * Your code must strictly follow the coding conventions.
+
 ### Contact
 You can [raise a new issue](https://github.com/VamsiSangam/theoryofprogramming/issues/new) if you want to ask questions. Feel free to use the issues as a forum. Alternatively, but less preferably, contact me by mail ```vamsisangam@live.com```.
