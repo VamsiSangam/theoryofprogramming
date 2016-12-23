@@ -1,0 +1,22 @@
+Enter the Number of Vertices -
+6
+Enter the Number of Edges -
+9
+1 2 2
+1 3 1
+1 4 5
+2 6 1
+2 4 2
+3 4 1
+4 5 2
+4 6 2
+5 3 4
+Enter a start vertex -
+1
+Shortest distances -
+Vertex 1, Distance = 0, Parent = 0, Path = 1
+Vertex 2, Distance = 2, Parent = 1, Path = 1 2
+Vertex 3, Distance = 1, Parent = 1, Path = 1 3
+Vertex 4, Distance = 2, Parent = 3, Path = 1 3 4
+Vertex 5, Distance = 4, Parent = 4, Path = 1 3 4 5
+Vertex 6, Distance = 3, Parent = 2, Path = 1 2 6
