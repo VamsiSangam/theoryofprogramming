@@ -9,10 +9,8 @@ Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */
  
-#include <cstdio>
-#include <cstdlib>
- 
-using namespace std;
+#include <stdio.h>
+#include <stdlib.h>
  
 struct node {
     int val;
