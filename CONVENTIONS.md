@@ -1,6 +1,6 @@
 Coding Conventions
 ----
-* For any language, your code must begin with comments in style given below -
+* For any language, your file must begin with comments in style given below (the comments must start at line 1 before any line of code) -
 ```
 /* ===== ===== =====
 
@@ -20,3 +20,43 @@ Code Contributor - <contributor_name>, <other_contributor_name_if_any>
 * Avoid using unnecessary variables.
 * Please use proper variable names.
 * Please use the minimum possible scope for your variables.
+* Please use new lines to separate various parts of your function.
+* New line must be present before and after every loop. Example -
+``` C
+
+for (i = 0; i < 10; ++i) {
+    // code
+}
+
+```
+* If your loop has an explanatory comment, place it above the loop and a new line must be added before the comments. Example -
+``` C
+
+// Comments explaining loop
+for (i = 0; i < 10; ++i) {
+    // code
+}
+
+```
+* Please separate the declaration and the non-declaration lines of code with a new line. Example -
+``` C
+// code
+
+int arr[] = {1, 2, 3, 4, 5};    // array of integers
+int size = 5;                   // size of array 'arr'
+
+printf("Size of array = %d\n", size);
+// more code
+```
+* Binary operators must have spaces on either side of them. Example -
+``` C
+if (a < 10 && b > 20) {
+    x = (func(a + b) % b) - (a * b);
+}
+```
+* A ```return``` statement must always have a new line before it. Example -
+``` C
+// code
+
+return 0;
+```
