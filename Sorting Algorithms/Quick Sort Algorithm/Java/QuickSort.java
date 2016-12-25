@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /* ===== ===== =====
 
 Theory of Programming
@@ -10,6 +8,8 @@ GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Aditya Aggarwal (github.com/the-cybersapien, cybersapien.xyz)
 
 ===== ===== ===== */
+
+import java.util.Scanner;
 
 public class QuickSort{
 
@@ -29,7 +29,7 @@ public class QuickSort{
         }
 
         //Call the quickSort function to sort the Array
-        quickSort(array, 0, size-1);
+        quickSort(array, 0, size - 1);
 
         //Print the Sorted Array
         System.out.println("Sorted Array: ");
@@ -37,10 +37,11 @@ public class QuickSort{
         for (int a : array) {
             System.out.print(a + " ");
         }
+
         System.out.println();
     }
 
-    private static void quickSort(int[] arr, int low, int high) {
+    public static void quickSort(int[] arr, int low, int high) {
         //Check if low is smaller than high
         //This is the exit condition for the recursive solution
         if (low < high){
@@ -56,7 +57,7 @@ public class QuickSort{
     private static int partition(int arr[], int low, int high){
         //Select the pivot as the highest element in the array
         int pivot = arr[high];
-        int i = (low - 1);
+        int i = low - 1;
 
         for (int j = low; j < high; j++) {
             if (arr[j] <= pivot){
@@ -70,6 +71,7 @@ public class QuickSort{
         int temp = arr[i + 1];
         arr[i + 1] = arr[high];
         arr[high] = temp;
-        return i+1;
+
+        return i + 1;
     }
 }
