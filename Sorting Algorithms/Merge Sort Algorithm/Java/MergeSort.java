@@ -23,16 +23,21 @@ public class MergeSort
         int[] array = new int[size];
         //Get the data from user
         System.out.println("Enter the elements of the array: ");
+
         for (int i = 0; i < size; i++) {
             array[i] = in.nextInt();
         }
+
         //Merge the Array
         mergeSort(array,0, size-1);
+        
         //Print the final answer to the User:
         System.out.println("Sorted Array: ");
+        
         for (int x : array){
             System.out.print(x + " ");
         }
+
         System.out.println();
     }
 
@@ -40,8 +45,10 @@ public class MergeSort
         //Check if low is smaller than higher
         // this is the exit condition for the recursive solution
         if (low < high){
+            
             //get the index of the element in the middle
             int mid = low + (high - low) / 2;
+            
             //sort the left side of the array
             mergeSort(array, low, mid);
             //sort the right side of the array
@@ -53,6 +60,7 @@ public class MergeSort
 
     private static void merge(int[] array, int low, int mid, int high) {
         int[] aux = new int[array.length];
+        
         //Copy both parts into the auxiliary array
         for (int i = low; i <= high; i++){
             aux[i] = array[i];
@@ -61,6 +69,7 @@ public class MergeSort
         int i = low;
         int j = mid + 1;
         int k = low;
+        
         //Merge the left and right parts of the array while comparing their values
         while (i <= mid && j <= high){
             if (aux[i] <= aux[j]){
@@ -72,10 +81,13 @@ public class MergeSort
             }
             k++;
         }
+        
+
         while (i <= mid){
             array[k] = aux[i];
             k++;
             i++;
         }
+
     }
 }
