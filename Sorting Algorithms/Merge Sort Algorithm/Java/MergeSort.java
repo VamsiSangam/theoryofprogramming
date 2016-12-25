@@ -30,7 +30,7 @@ public class MergeSort
         mergeSort(array,0, size-1);
         //Print the final answer to the User:
         System.out.println("Sorted Array: ");
-        for (int x: array){
+        for (int x : array){
             System.out.print(x + " ");
         }
         System.out.println();
@@ -41,11 +41,11 @@ public class MergeSort
         // this is the exit condition for the recursive solution
         if (low < high){
             //get the index of the element in the middle
-            int mid = low + (high-low)/2;
+            int mid = low + (high - low) / 2;
             //sort the left side of the array
             mergeSort(array, low, mid);
             //sort the right side of the array
-            mergeSort(array, mid+1, high);
+            mergeSort(array, mid + 1, high);
             //Combine the two arrays
             merge(array, low, mid, high);
         }
