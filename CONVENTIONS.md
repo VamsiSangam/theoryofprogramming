@@ -1,7 +1,7 @@
 Coding Conventions
 ----
 * For any language, your file must begin with comments in style given below (the comments must start at line 1 before any line of code) -
-```
+``` C
 /* ===== ===== =====
 
 Theory of Programming
@@ -59,4 +59,24 @@ if (a < 10 && b > 20) {
 // code
 
 return 0;
+```
+* But you don't need to add a new line before the ```return``` statement if it is the only statement in the block. Example -
+``` C
+if (a < 10) {
+    return 0;
+}
+
+if (a < 5) {
+    // comment
+    return 0;
+}
+
+a = a + b * c;
+
+return 0;
+```
+* When you are using an end of line comment, please start with a space. Example -
+``` C
+// right
+//wrong
 ```
