@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /* ===== ===== =====
 
 Theory of Programming
@@ -10,6 +8,10 @@ GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Aditya Aggarwal (github.com/the-cybersapien, cybersapien.xyz)
 
 ===== ===== ===== */
+
+import java.util.Scanner;
+
+
 public class MergeSort
 {
 
