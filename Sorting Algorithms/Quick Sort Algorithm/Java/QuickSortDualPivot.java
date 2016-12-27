@@ -15,7 +15,7 @@ public class QuickSortDualPivot
 {
 	
 	public static void main(String[] args) {
-		// Initialize the Scanner Object to take input
+	// Initialize the Scanner Object to take input
         Scanner in = new Scanner(System.in);
         // Get the Size of the Array
         System.out.println("Enter the size of the array:");
