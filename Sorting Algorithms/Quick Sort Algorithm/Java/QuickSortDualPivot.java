@@ -104,7 +104,7 @@ public class QuickSortDualPivot
     	array[lt] = array[low];
     	array[low] = temp;
 
-    	//Recursively do the same to the sub-arrays
+    	// Recursively do the same to the sub-arrays
     	quickSortDualPivot(array, low, lt - 1);
     	quickSortDualPivot(array, lt + 1, ht - 1);
     	quickSortDualPivot(array, ht + 1, high);
