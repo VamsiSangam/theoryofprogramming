@@ -1,4 +1,3 @@
-
 /* ===== ===== =====
 
 Theory of Programming
@@ -12,8 +11,7 @@ Code Contributor - Aditya Aggarwal (github.com/the-cybersapien, cybersapien.xyz)
 
 import java.util.Scanner;
 
-
-public class Solution {
+public class QuickSortRandomPivot {
 
     public static void main(String[] args) {
         // Initialize the Scanner Object to take input
@@ -44,7 +42,6 @@ public class Solution {
     }
 
     private static void quickSortRandomPivot(int[] array, int low, int high){
-
         if (low >= high) {
             // A single element is
             // considered to be sorted
