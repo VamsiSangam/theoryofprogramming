@@ -115,8 +115,8 @@ public class Trie {
 		return true;
 	}
 	
-	// helper method for searching & startsWith functions
-	public TrieNode searchNode(String word) {
+	// helper method for searching & delete functions
+	private TrieNode searchNode(String word) {
 		HashMap<Character, TrieNode> children = root.getChildren();
 		
 		TrieNode t = null;
@@ -207,7 +207,7 @@ class Test {
 		System.out.println(trie.startsWith("th"));					// true
 		System.out.println(trie.startsWith("fab"));					// false
 		System.out.println(trie.delete("does"));					// true
-		System.out.println(trie.startsWith("does"));				// false
+		System.out.println(trie.startsWith("does"));					// false
 		System.out.println(trie.startsWith("o"));					// false
 
 		System.out.println(trie.search("the"));						// true
