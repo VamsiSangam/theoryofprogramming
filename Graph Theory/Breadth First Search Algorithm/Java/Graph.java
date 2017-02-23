@@ -25,7 +25,7 @@ public class Graph {
 	public Graph(int v) {
 		this.v = v;
 		adj = new LinkedList[v];
-		for (int i=0; i<v; ++i) {
+		for (int i = 0; i < v; ++i) {
 			adj[i] = new LinkedList<Integer>();
 		}
 	}
