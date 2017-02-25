@@ -70,6 +70,14 @@ public class Graph {
 		}
 	}
 
+	/*
+	Graph
+	  1 -- 2 -- 3
+	 /      \    \
+	0 -- 7   8 -- 4
+	 \       |    /
+	  5 ____ 6 __/
+	*/
 	public static void main(String args[]) {
 		Graph g = new Graph(9);
 
