@@ -41,13 +41,13 @@ def merge_sort(array):
 		
 		# Copying leftover elements from left half
 		while i < len(left_half):
-			array[k]=left_half[i]
+			array[k] = left_half[i]
 			i = i + 1
 			k = k + 1
 			
 		# Copying leftover elements from right half
 		while j < len(right_half):
-			array[k]=right_half[j]
+			array[k] = right_half[j]
 			j = j + 1
 			k = k + 1
 
