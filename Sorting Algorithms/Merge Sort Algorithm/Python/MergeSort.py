@@ -9,8 +9,8 @@
 #
 # ===== ===== =====
 
-
 def merge_sort(array):
+
 	# Check if length of array is more than 1
 	if len(array) > 1:
 	
@@ -25,33 +25,31 @@ def merge_sort(array):
 		# Merge sorting right half
 		merge_sort(right_half)
 		
-		i = 0
-		j = 0
-		k = 0
+		# Merge the two halves & return it
+		merge(left_half, right_half)
 		
-		# Merge the two halves
-		while i < len(left_half) and j < len(right_half):
-			if left_half[i] < right_half[j]:
-				array[k] = left_half[i]
-				i = i + 1
-			else:
-				array[k] = right_half[j]
-				j = j + 1
-			k = k + 1
-		
-		# Copying leftover elements from left half
-		while i < len(left_half):
-			array[k] = left_half[i]
-			i = i + 1
-			k = k + 1
-			
-		# Copying leftover elements from right half
-		while j < len(right_half):
-			array[k] = right_half[j]
-			j = j + 1
-			k = k + 1
+	else:
+		# Return array with single element
+		return array
 
-array = [54,26,93,17,77,31,44,55,20]
+# Merge function
+def merge(left, right):
+	
+	# If left part is empty, return right part
+	if not left:
+		return right
+		
+	# If right part is empty, return left part
+	if not right:
+		return left
+	
+	# Compare first element and merge the remaining elements of the part (with smaller element) with other part
+	if left[0] < right[0]
+		return left[0] + merge(left[1:], right)
+		
+	return right[0] + merge(left, right[1:])
+
+# Example
+array = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 print("Merge Sort for ", array)
-merge_sort(array)
-print(array)
+print(merge_sort(array))
