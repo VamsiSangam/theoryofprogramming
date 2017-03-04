@@ -9,6 +9,7 @@
 #
 # ===== ===== =====
 
+# Sort function
 def merge_sort(array):
 
 	# Check if length of array is more than 1
@@ -44,7 +45,7 @@ def merge(left, right):
 		return left
 	
 	# Compare first element and merge the remaining elements of the part (with smaller element) with other part
-	if left[0] < right[0]
+	if left[0] < right[0]:
 		return left[0] + merge(left[1:], right)
 		
 	return right[0] + merge(left, right[1:])
