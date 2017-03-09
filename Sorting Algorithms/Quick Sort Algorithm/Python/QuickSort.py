@@ -10,26 +10,26 @@
 # ===== ===== ===== */
 
 # Quick Sort Function
-def quickSort(alist):
-	quickSortHelper(alist, 0, len(alist) - 1)
+def quick_sort(alist):
+	_quick_sort_helper(alist, 0, len(alist) - 1)
 
 
 # Helper Function
-def quickSortHelper(alist, start, end):
+def _quick_sort_helper(alist, start, end):
 
 	# If there are two or more elements
 	if start < end:
 		
 		# Partition the list
-		split = partition(alist, start, end)
+		split = _partition(alist, start, end)
 		
 		# Sort both halves
-		quickSortHelper(alist, start, split - 1)
-		quickSortHelper(alist, split + 1, end)
+		_quick_sort_helper(alist, start, split - 1)
+		_quick_sort_helper(alist, split + 1, end)
 
 
 # Partition Function
-def partition(alist, start, end):
+def _partition(alist, start, end):
 
 	# Partition around the last value
 	pivot = alist[end]
@@ -80,5 +80,5 @@ def partition(alist, start, end):
 	
 # Example	
 alist = [1, 5, 2, 7, 3, 9, 4]
-quickSort(alist)
+quick_sort(alist)
 print(alist)
