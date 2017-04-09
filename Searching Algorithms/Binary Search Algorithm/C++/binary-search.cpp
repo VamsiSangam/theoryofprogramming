@@ -1,3 +1,14 @@
+/* ===== ===== =====
+
+Theory of Programming
+
+Binary Search Algorithm
+http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/
+GitHub - https://github.com/salman-bhai/theoryofprogramming
+Code Contributor - <salman-bhai>
+
+===== ===== ===== */
+//Includes all header files required for C++ functions
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -40,10 +51,12 @@ int main() {
 
 	int x = binary(key);
 
+	//In case -1 is found, means key isn't present
 	if(x == -1)
 		printf("Key not found!\n");
+	//If -1 isn't returned, key is found!
 	else
-		printf("Key found at Position %d\n",x+1);
+		printf("Key found at position %d\n",x+1);
 
 	return 0;
 } 
