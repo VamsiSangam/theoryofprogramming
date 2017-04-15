@@ -17,18 +17,19 @@ vector<int> v;
 //Main Binary Search logic
 int binary(int key) {
 	int first = 0;
-	int last = v.size()-1;
+	int last = v.size() - 1;
 
 	while(first <= last) {
-		int mid = ((first+last)/2);
+		int mid = ((first + last) / 2);
 		if(v[mid] == key) {
 			return mid;
 		}
 		else if(v[mid] > key) {
 			last = mid - 1;
 		}
-		else
+		else {
 			first = mid + 1;
+		}
 	}
 
 	return -1;
@@ -52,11 +53,12 @@ int main() {
 	int x = binary(key);
 
 	//In case -1 is found, means key isn't present
-	if(x == -1)
+	if(x == -1) {
 		printf("Key not found!\n");
+	}
 	//If -1 isn't returned, key is found!
-	else
-		printf("Key found at position %d\n",x+1);
-
+	else {
+		printf("Key found at position %d\n",x + 1);
+	}
 	return 0;
 } 
