@@ -12,6 +12,7 @@ Code Contributor - <salman-bhai>
 #include <bits/stdc++.h>
 using namespace std;
 
+//Variable declaration
 vector<int> v;
 
 //Main Binary Search logic
@@ -21,17 +22,21 @@ int binary(int key) {
 
 	while(first <= last) {
 		int mid = ((first + last) / 2);
+		//If the middle element is the key, return the middle element
 		if(v[mid] == key) {
 			return mid;
 		}
+		//If the key is lesser than the middle element, then then it is in the left most region
 		else if(v[mid] > key) {
 			last = mid - 1;
 		}
+		//If the key is greater than the middle element, then it is in the right most region
 		else {
 			first = mid + 1;
 		}
 	}
 
+	//If key isn't found, return -1
 	return -1;
 }
 
