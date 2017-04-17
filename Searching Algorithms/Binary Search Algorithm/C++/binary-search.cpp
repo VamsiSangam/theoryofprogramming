@@ -12,11 +12,9 @@ Code Contributor - <salman-bhai>
 #include <bits/stdc++.h>
 using namespace std;
 
-//Variable declaration
-vector<int> v;
 
 //Main Binary Search logic
-int binary(int key) {
+int binary(vector<int> v, int key) {
 	int first = 0;
 	int last = v.size() - 1;
 
@@ -41,6 +39,9 @@ int binary(int key) {
 }
 
 int main() {
+	//Variable declaration
+	vector<int> v;
+
 	//Enter number of elements in the vector
 	int n, temp;
 	cin >> n;
@@ -55,7 +56,7 @@ int main() {
 	int key;
 	cin >> key;
 
-	int x = binary(key);
+	int x = binary(v, key);
 
 	//In case -1 is found, means key isn't present
 	if(x == -1) {
