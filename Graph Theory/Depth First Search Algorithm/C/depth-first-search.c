@@ -31,28 +31,24 @@ struct node * add(struct node * head, int num)
 }
 
 void DFSExplore(struct node * adjacencyList[], int parent[], int vertex)
-{	
-	if (parent[vertex] != -1) {
-		// un-visited vertex
-		struct node * temp = adjacencyList[vertex];
-		
-		// recursively visit all vertices accessible from this Vertex
-		while (temp != NULL) {
+{
+	struct node * temp = adjacencyList[vertex];
+	
+	// recursively visit all vertices accessible from this Vertex
+	while (temp != NULL) {
+		if (parent[temp->val] == -1) {
+			parent[temp->val] = vertex;
+			// We started exploring from Vertex -'vertex',
+			// so the Vertex - temp->val, it's
+			// parent should be our initial vertex
 			
-			if (parent[temp->val] == -1) {
-				parent[temp->val] = vertex;
-				// We started exploring from Vertex -'vertex',
-				// so the Vertex - temp->val, it's
-				// parent should be our initial vertex
-			  
-				DFSExplore(adjacencyList, parent, temp->val);
-				// Then we recursively visit everything from the child vertex
-			}
-			
-			temp = temp->next;
-			// After finishing, move on to next Vertex
-			// adjacent to the vertex - 'vertex'
+			DFSExplore(adjacencyList, parent, temp->val);
+			// Then we recursively visit everything from the child vertex
 		}
+		
+		temp = temp->next;
+		// After finishing, move on to next Vertex
+		// adjacent to the vertex - 'vertex'
 	}
 }
 
