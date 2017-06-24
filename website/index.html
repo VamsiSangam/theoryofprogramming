@@ -1,26 +1,311 @@
 <!DOCTYPE html>
 <html>
+
     <head>
+        <title>Theory of Programming</title>
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
+        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link rel="shortcut icon" href="./img/shortcut-icon.png">
         <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                font-size: 1.1em;
+            }
+
+            .brand-logo {
+                font-family: Consolas;
+            }
+
+            .logo {
+                height: 32px;
+                width: 32px;
+            }
+
+            header {
+                background-image: url('img/header.jpg');
+                background-position: center;
+            }
+
+            .navbar-top li a {
+                color: white;
+            }
+
+            .navbar-top li:hover {
+                background-color: lightskyblue;
+            }
+        </style>
     </head>
+
     <body>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Logo</a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
-                </ul>
+        <div class="row light-blue darken-3 white-text" style="margin-bottom: 0px;">
+            <div class="container valign-wrapper" style="height:350px;">
+                <div class="col s10">
+                    <h3>Theory of Programming</h3>
+                    <p>
+                        Programming Simplified!
+                        <br>Learn a topic in just 10 minutes!
+                        <br>Open source tutorials from the best devs in the internet.
+                    </p>
+                    <a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
+                    <a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
+                </div>
+                <div class="col s2">
+                    <img src="./img/development.png" alt="development" style="height: 256px; width:256px;"/>
+                </div>
             </div>
-        </nav>
+        </div>
+        <div class="row">
+            <!-- Dropdown Structure -->
+            <ul id="data-structures-and-algorithms" class="navbar-top dropdown-content light-blue darken-4 white-text">
+                <li><a class="white-text" href="#!">Graph Theory</a></li>
+                <li><a href="#!">Tree Data Structures</a></li>
+                <li><a href="#!">Dynamic Programming</a></li>
+                <li><a href="#!">Searching Algorithms</a></li>
+                <li><a href="#!">Sorting Algorithms</a></li>
+                <li><a href="#!">Math</a></li>
+            </ul>
+            <nav class="light-blue darken-4 white-text">
+                <div class="col m1 l1"></div>
+                <div class="col m10 l10">
+                    <div class="nav-wrapper">
+                        <ul class="hide-on-med-and-down">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-button" href="#!" data-activates="data-structures-and-algorithms">
+                                    Data Structures and Algorithms &nbsp; <i class="fa fa-angle-down"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">Java</a>
+                            </li>
+                            <li>
+                                <a href="#">C++</a>
+                            </li>
+                            <li>
+                                <a href="#">Interview Corner</a>
+                            </li>
+                            <li>
+                                <a href="#">Team</a>
+                            </li>
+                            <!-- Dropdown Trigger -->
+                            <li>
+                                <a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown
+                                    <i class="material-icons right">arrow_drop_down</i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col m1 l1"></div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col m1 l1 hide-on-small-only"></div>
+            <div class="col s12 m10 l10">
+                Theory of Programming is a very helpful website that helps you in understanding
+                <img class="right-align" title="Theory of Programming Logo" src="http://theoryofprogramming.com/wp-content/uploads/2015/07/logo-150x150.png" alt="Theory of Programming Logo"
+                    width="100" height="100" /> a wide range of programming concepts. There are many posts on Data Structures, Algorithms and the Java Programming Language which explain the concepts with vivid explanations, well-drawn diagrams and also come with the actual code of
+                concept. Theory of Programming also has posts on solving competitive coding questions which are based on data structures and algorithms discussed in the website. These help you not only to be a hero in your classroom but also a legend
+                in the coding websites such as CodeChef, SPOJ, etc.
+                <h3>Latest Posts</h3>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/06/dynamic-programming-edit-distance/">Dynamic Programming - Edit Distance</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/">Binary Search Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/10/21/dynamic-programming-kadanes-algorithm/">Kadane's Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/03/03/constructor-and-overloading-methods/">Java - Constructor and Overloading Methods</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/02/19/encapsulation-in-java/">Encapsulation in Java</a>
+                    </li>
+                </ul>
+                <h2>Interview Corner</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/10/05/arrays-interview-questions/">Arrays</a>
+                    </li>
+                </ul>
+                <h2>Graph Theory</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/24/graph-theory-basics/">Graph Theory Basics</a> 📈 One of Top Viewed!</li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/adjacency-list-using-cpp-stl/">Adjacency List Implementation in C++ STL</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/adjacency-list-in-java/">Adjacency List in Java</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/adjacency-list-in-c-sharp/">Adjacency List in C#</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/25/graph-theory-breadth-first-search/">Breadth First Search (BFS) in C</a> 📈 One of Top Viewed!</li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/breadth-first-search-algorithm-using-cpp-stl/">Breadth First Search (BFS) in C++ STL</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/breadth-first-search-algorithm-using-queue/">Breadth First Search (BFS) using a Queue in C++ STL</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/25/graph-theory-snakes-and-ladders/">Snakes and Ladder Game by Breadth First Search (BFS)</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/26/graph-theory-depth-first-search/">Depth First Search (DFS)</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/19/bellman-ford-algorithm/">Bellman Ford Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/bellman-ford-algorithm-using-cpp-stl/">Bellman Ford Algorithm in C++ STL</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/03/27/prims-algorithm/">Prim's Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/prims-algorithm-using-cpp-stl/">Prim's Algorithm in C++ STL</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/11/graph-theory-dijkstras-algorithm/">Dijkstra's Algorithm</a>
+                    </li>
+                </ul>
+                <h2>Tree and Heap Data Structures</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/24/binary-indexed-tree-or-fenwick-tree/">Binary Indexed Tree or Fenwick Tree</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/16/trie-trees-2/">Trie Tree</a> 📈 One of Top Viewed!</li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/trie-tree-using-cpp-class/">Trie Tree using C++ Class</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/08/24/trie-tree-practise-spoj-phonelst/">Trie Tree Practice - SPOJ - PHONELST</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/09/01/trie-tree-practise-spoj-dict/">Trie Tree Practice - SPOJ - DICT</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/15/compressed-trie-tree/">Compressed Trie Tree or Radix Tree or Patricia Tree</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/27/segment-trees/">Segment Trees</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/28/binary-heaps/">Binary Heaps (using Arrays)</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/02/01/more-binary-heaps/">Binary Heaps (using Structures) and Heapsort Algorithm</a>
+                    </li>
+                </ul>
+                <h2>Dynamic Programming</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/03/02/dynamic-programming-introduction-and-fibonacci-numbers/">Dynamic Programming Introduction and Fibonacci Numbers</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/10/21/dynamic-programming-kadanes-algorithm/">Kadane's Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/06/dynamic-programming-edit-distance/">Edit Distance</a>
+                    </li>
+                </ul>
+                <h2>Search Algorithms</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/">Binary Search Algorithm</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/10/jump-search-algorithm/">Jump Search Algorithm</a>
+                    </li>
+                </ul>
+                <h2>Sorting Algorithms</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/20/quick-sort/">Quick Sort</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/01/29/merge-sort/">Merge Sort</a>
+                    </li>
+                </ul>
+                <h2>Java Programming Tutorials</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/05/26/java-an-introduction/">An Introduction</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/05/27/java-data-types-input-and-operators/">Data Types, Input and Operators</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/05/30/java-branching-and-looping/">If Else, Switch and Loops</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/06/04/java-tutorials-strings-string-buffer-builder-in-java/">String, StringBuffer and StringBuilder</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/06/14/java-tutorials-arrays-in-java/">Arrays in Java</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/06/21/java-tutorials-enum-and-methods-in-java/">Enum and Methods in Java</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/08/14/classes-and-objects/">Classes and Objects</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/02/19/encapsulation-in-java/">Encapsulation in Java</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/03/03/constructor-and-overloading-methods/">Constructor and Overloading Methods</a>
+                    </li>
+                </ul>
+                <h2>C++ Programming Tutorials</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/12/23/why-should-i-learn-c/">Why should I learn C++?</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2015/12/26/c-programming-style-and-structure/">C++ Programming Style and Structure</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/01/15/c-variables-initialization-and-assignment/">Variables, Initialization and Assignment</a>
+                    </li>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2016/11/14/writing-professional-code-c/">Writing Professional Code in C++</a>
+                    </li>
+                </ul>
+                <h2>Math</h2>
+                <ul>
+                    <li>
+                        <a href="http://theoryofprogramming.com/2014/12/24/number-theory-modular-arithmetic/">Modular Arithmetic</a>
+                    </li>
+                </ul>
+                <h2>Express your support by liking our Facebook Page!</h2>
+                Did Theory of Programming help you with programming..? If yes, then, express your support by liking our Facebook page and sharing it with your friends. Let the knowledge flow..! The more you share, the more you get..! ;)
+                <div class="fb-page" data-width="500" data-href="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"
+                    data-show-posts="true">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc">
+                            <a href="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc">Theory of Programming</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col m1 l1 hide-on-small-only"></div>
+        </div>
         <!--Import jQuery before materialize.js-->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
     </body>
+
 </html>
