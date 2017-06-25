@@ -1,119 +1,197 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theory of Programming</title>
+	<link rel="shortcut icon" href="./img/shortcut-icon.png">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<script src="js/modernizr-custom.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/demo.css" />
+	<style>
+		body {
+			font-size: 1.4em;
+            font-family: 'Josefin Sans', sans-serif;
+		}
+	</style>
+</head>
 
-    <head>
-        <title>Theory of Programming</title>
-        <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
-        <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <link rel="shortcut icon" href="./img/shortcut-icon.png">
-        <!--Let browser know website is optimized for mobile-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <style>
-            body {
-                font-size: 1.1em;
-            }
+<body>
+	<!-- Main container -->
+	<div class="bp-multi-nav">
+		<!-- Blueprint header -->
+		<header class="bp-header cf">
+			<div class="dummy-logo z-depth-2">
+				<i class="fa fa-2x fa-code"></i>
+				<h5>Theory of Programming</h5>
+			</div>
+		</header>
+		<a class="action action--open" aria-label="Open Menu"><i class="fa fa-navicon"></i></a>
+		<nav id="ml-menu" class="menu z-depth-2">
+			<a class="action action--close" aria-label="Close Menu">
+				<i class="fa fa-close"></i>
+			</a>
+			<div class="menu__wrap">
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Home</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-data-structures-and-algorithms" aria-owns="menu-data-structures-and-algorithms" href="#">Data Structures and Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java" aria-owns="menu-java" href="#">Java</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">C++</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Interview Corner</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Team</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">GitHub</a></li>
+				</ul>
+				<!-- menu-data-structures-and-algorithms -->
+				<ul data-menu="menu-data-structures-and-algorithms" id="menu-data-structures-and-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Data Structures and Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-graph-theory" aria-owns="menu-graph-theory" href="#">Graph Theory</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-tree-data-structures" aria-owns="menu-tree-data-structures" href="#">Tree Data Structures</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-dynamic-programming" aria-owns="menu-dynamic-programming" href="#">Dynamic Programming</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-searching-algorithms" aria-owns="menu-searching-algorithms" href="#">Searching Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-sorting-algorithms" aria-owns="menu-sorting-algorithms" href="#">Sorting Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-math" aria-owns="menu-math" href="#">Math</a></li>
+				</ul>
+				<!-- menu-graph-theory -->
+				<ul data-menu="menu-graph-theory" id="menu-graph-theory" class="menu__level" tabindex="-1" role="menu" aria-label="Graph Theory">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Graph Theory Basics</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Breadth First Search (BFS) Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Snakes and Ladders Game Code</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Depth First Search</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bellman Ford Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Prim's Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dijkstra's Algorithm</a></li>
+				</ul>
+                <!-- menu-tree-data-structures -->
+				<ul data-menu="menu-tree-data-structures" id="menu-tree-data-structures" class="menu__level" tabindex="-1" role="menu" aria-label="Tree Data Structures">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Indexed Tree (or) Fenwick Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Trie Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Compressed Trie Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Segment Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap and Heap sort algorithm</a></li>
+				</ul>
+                <!-- menu-dynamic-programming -->
+				<ul data-menu="menu-dynamic-programming" id="menu-dynamic-programming" class="menu__level" tabindex="-1" role="menu" aria-label="Dynamic Programming">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Introduction and Fibonacci Numbers</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kadane's Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Edit Distance</a></li>
+				</ul>
+                <!-- menu-searching-algorithms -->
+				<ul data-menu="menu-searching-algorithms" id="menu-searching-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Searching Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Search Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Jump Search Algorithm</a></li>
+				</ul>
+                <!-- menu-sorting-algorithms -->
+				<ul data-menu="menu-sorting-algorithms" id="menu-sorting-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Sorting Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quick Sort Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Merge Sort Algorithm</a></li>
+				</ul>
+                <!-- menu-math -->
+				<ul data-menu="menu-math" id="menu-math" class="menu__level" tabindex="-1" role="menu" aria-label="Math">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Modular Arithmetic Properties</a></li>
+				</ul>
+                <!-- menu-java -->
+				<ul data-menu="menu-java" id="menu-java" class="menu__level" tabindex="-1" role="menu" aria-label="Java">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-language-basics" aria-owns="menu-java-language-basics" href="#">Language Basics</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-introduction-to-oop" aria-owns="menu-java-introduction-to-oop" href="#">Introduction to OOP</a></li>
+				</ul>
+                <!-- menu-java-language-basics -->
+				<ul data-menu="menu-java-language-basics" id="menu-java-language-basics" class="menu__level" tabindex="-1" role="menu" aria-label="Language Basics">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">An Introduction</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Data types, Input and Operators</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">If-else, switch and loops</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">String, StringBuilder and StringBuffer</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Enum and methods in Java</a></li>
+				</ul>
+                <!-- menu-java-introduction-to-oop -->
+				<ul data-menu="menu-java-introduction-to-oop" id="menu-java-introduction-to-oop" class="menu__level" tabindex="-1" role="menu" aria-label="Introduction to OOP">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Classes and Objects</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Encapsulation in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Constructor and Overloading methods</a></li>
+				</ul>
+				<!-- Submenu 2 -->
+				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Citrus Fruits</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Berries</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li>
+				</ul>
+				<!-- Submenu 2-1 -->
+				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Exotic Mixes</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+				</ul>
+				<!-- Submenu 3 -->
+				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
+				</ul>
+				<!-- Submenu 3-1 -->
+				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
+				</ul>
+				<!-- Submenu 4-1 -->
+				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- /view -->
 
-            .brand-logo {
-                font-family: Consolas;
-            }
-
-            .logo {
-                height: 32px;
-                width: 32px;
-            }
-
-            header {
-                background-image: url('img/header.jpg');
-                background-position: center;
-            }
-
-            .navbar-top li a {
-                color: white;
-            }
-
-            .navbar-top li:hover {
-                background-color: lightskyblue;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="row light-blue darken-3 white-text" style="margin-bottom: 0px;">
-            <div class="container valign-wrapper" style="height:350px;">
-                <div class="col s10">
-                    <h3>Theory of Programming</h3>
-                    <p>
-                        Programming Simplified!
-                        <br>Learn a topic in just 10 minutes!
-                        <br>Open source tutorials from the best devs in the internet.
-                    </p>
-                    <a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
-                    <a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
-                </div>
-                <div class="col s2">
-                    <img src="./img/development.png" alt="development" style="height: 256px; width:256px;"/>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <!-- Dropdown Structure -->
-            <ul id="data-structures-and-algorithms" class="navbar-top dropdown-content light-blue darken-4 white-text">
-                <li><a class="white-text" href="#!">Graph Theory</a></li>
-                <li><a href="#!">Tree Data Structures</a></li>
-                <li><a href="#!">Dynamic Programming</a></li>
-                <li><a href="#!">Searching Algorithms</a></li>
-                <li><a href="#!">Sorting Algorithms</a></li>
-                <li><a href="#!">Math</a></li>
-            </ul>
-            <nav class="light-blue darken-4 white-text">
-                <div class="col m1 l1"></div>
-                <div class="col m10 l10">
-                    <div class="nav-wrapper">
-                        <ul class="hide-on-med-and-down">
-                            <li>
-                                <a href="#">Home</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-button" href="#!" data-activates="data-structures-and-algorithms">
-                                    Data Structures and Algorithms &nbsp; <i class="fa fa-angle-down"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">Java</a>
-                            </li>
-                            <li>
-                                <a href="#">C++</a>
-                            </li>
-                            <li>
-                                <a href="#">Interview Corner</a>
-                            </li>
-                            <li>
-                                <a href="#">Team</a>
-                            </li>
-                            <!-- Dropdown Trigger -->
-                            <li>
-                                <a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown
-                                    <i class="material-icons right">arrow_drop_down</i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col m1 l1"></div>
-            </nav>
-        </div>
-        <div class="row">
+	<!-- content -->
+	<div class="content">
+		<div class="row light-blue darken-3 white-text z-depth-2" style="margin-bottom: 0px;">
+			<div class="container valign-wrapper" style="height:350px;">
+				<div class="col s10">
+					<h3>Theory of Programming</h3>
+					<p>
+						Programming Simplified!
+						<br>Learn a topic in just 10 minutes!
+						<br>Open source tutorials from the best devs in the internet.
+					</p>
+					<a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
+					<a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
+				</div>
+				<div class="col s2">
+					<img src="./img/development.png" alt="development" style="height: 256px; width:256px;"/>
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
             <div class="col m1 l1 hide-on-small-only"></div>
             <div class="col s12 m10 l10">
                 Theory of Programming is a very helpful website that helps you in understanding
-                <img class="right-align" title="Theory of Programming Logo" src="http://theoryofprogramming.com/wp-content/uploads/2015/07/logo-150x150.png" alt="Theory of Programming Logo"
-                    width="100" height="100" /> a wide range of programming concepts. There are many posts on Data Structures, Algorithms and the Java Programming Language which explain the concepts with vivid explanations, well-drawn diagrams and also come with the actual code of
+                a wide range of programming concepts. There are many posts on Data Structures, Algorithms and the Java Programming Language which explain the concepts with vivid explanations, well-drawn diagrams and also come with the actual code of
                 concept. Theory of Programming also has posts on solving competitive coding questions which are based on data structures and algorithms discussed in the website. These help you not only to be a hero in your classroom but also a legend
                 in the coding websites such as CodeChef, SPOJ, etc.
-                <h3>Latest Posts</h3>
+                <h4>Latest Posts</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2016/11/06/dynamic-programming-edit-distance/">Dynamic Programming - Edit Distance</a>
@@ -131,13 +209,13 @@
                         <a href="http://theoryofprogramming.com/2016/02/19/encapsulation-in-java/">Encapsulation in Java</a>
                     </li>
                 </ul>
-                <h2>Interview Corner</h2>
+                <h4>Interview Corner</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2015/10/05/arrays-interview-questions/">Arrays</a>
                     </li>
                 </ul>
-                <h2>Graph Theory</h2>
+                <h4>Graph Theory</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/graph-theory-basics/">Graph Theory Basics</a> 📈 One of Top Viewed!</li>
@@ -180,7 +258,7 @@
                         <a href="http://theoryofprogramming.com/2015/01/11/graph-theory-dijkstras-algorithm/">Dijkstra's Algorithm</a>
                     </li>
                 </ul>
-                <h2>Tree and Heap Data Structures</h2>
+                <h4>Tree and Heap Data Structures</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/binary-indexed-tree-or-fenwick-tree/">Binary Indexed Tree or Fenwick Tree</a>
@@ -209,7 +287,7 @@
                         <a href="http://theoryofprogramming.com/2015/02/01/more-binary-heaps/">Binary Heaps (using Structures) and Heapsort Algorithm</a>
                     </li>
                 </ul>
-                <h2>Dynamic Programming</h2>
+                <h4>Dynamic Programming</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2015/03/02/dynamic-programming-introduction-and-fibonacci-numbers/">Dynamic Programming Introduction and Fibonacci Numbers</a>
@@ -221,7 +299,7 @@
                         <a href="http://theoryofprogramming.com/2016/11/06/dynamic-programming-edit-distance/">Edit Distance</a>
                     </li>
                 </ul>
-                <h2>Search Algorithms</h2>
+                <h4>Search Algorithms</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/">Binary Search Algorithm</a>
@@ -230,7 +308,7 @@
                         <a href="http://theoryofprogramming.com/2016/11/10/jump-search-algorithm/">Jump Search Algorithm</a>
                     </li>
                 </ul>
-                <h2>Sorting Algorithms</h2>
+                <h4>Sorting Algorithms</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2015/01/20/quick-sort/">Quick Sort</a>
@@ -239,7 +317,7 @@
                         <a href="http://theoryofprogramming.com/2015/01/29/merge-sort/">Merge Sort</a>
                     </li>
                 </ul>
-                <h2>Java Programming Tutorials</h2>
+                <h4>Java Programming Tutorials</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2015/05/26/java-an-introduction/">An Introduction</a>
@@ -269,7 +347,7 @@
                         <a href="http://theoryofprogramming.com/2016/03/03/constructor-and-overloading-methods/">Constructor and Overloading Methods</a>
                     </li>
                 </ul>
-                <h2>C++ Programming Tutorials</h2>
+                <h4>C++ Programming Tutorials</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2015/12/23/why-should-i-learn-c/">Why should I learn C++?</a>
@@ -284,13 +362,13 @@
                         <a href="http://theoryofprogramming.com/2016/11/14/writing-professional-code-c/">Writing Professional Code in C++</a>
                     </li>
                 </ul>
-                <h2>Math</h2>
+                <h4>Math</h4>
                 <ul>
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/number-theory-modular-arithmetic/">Modular Arithmetic</a>
                     </li>
                 </ul>
-                <h2>Express your support by liking our Facebook Page!</h2>
+                <h4>Express your support by liking our Facebook Page!</h4>
                 Did Theory of Programming help you with programming..? If yes, then, express your support by liking our Facebook page and sharing it with your friends. Let the knowledge flow..! The more you share, the more you get..! ;)
                 <div class="fb-page" data-width="500" data-href="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"
                     data-show-posts="true">
@@ -303,9 +381,56 @@
             </div>
             <div class="col m1 l1 hide-on-small-only"></div>
         </div>
-        <!--Import jQuery before materialize.js-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	</div>
+	<script src="js/classie.js"></script>
+	<script src="js/main.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
-    </body>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				breadcrumbsCtrl : false, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : true, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				// onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+			//document.body.style.marginLeft = "0px";
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+	})();
+	</script>
+</body>
 
 </html>
