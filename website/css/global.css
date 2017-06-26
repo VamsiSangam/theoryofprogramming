@@ -1,5 +1,6 @@
 body {
     font-size: 1.4em;
+    color: black;
     font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -10,6 +11,11 @@ body {
 
 .texture-dark-mosaic {
     background: url('../img/dark_mosaic.png') !important;
+    background-repeat: repeat;
+}
+
+.texture-crossword {
+    background: url('../img/crossword.png') !important;
     background-repeat: repeat;
 }
 
