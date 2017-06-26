@@ -89,7 +89,7 @@
 			this.backCtrl = document.createElement('a');
 			this.backCtrl.className = 'menu__back menu__back--hidden';
 			this.backCtrl.setAttribute('aria-label', 'Go back');
-			this.backCtrl.innerHTML = '<i class="fa fa-long-arrow-left" style="margin-top:28px"></i>';
+			this.backCtrl.innerHTML = 'Go back &nbsp; <i class="fa fa-long-arrow-left" style="margin-top:28px"></i>';
 			this.el.insertBefore(this.backCtrl, this.el.firstChild);
 		}
 		
