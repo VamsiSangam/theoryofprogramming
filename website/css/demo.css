@@ -269,10 +269,16 @@
 	background: url(../img/loading.svg) no-repeat 50% 50%;
 }
 
+.nav-toggle-btn {
+	right: unset;
+	bottom: unset;
+	padding-top: 0px;
+}
+
 @media screen and (max-width: 40em) {
-	.bp-multi-nav .bp-header {
+	/*.bp-multi-nav .bp-header {
 		padding-top: 3em;
-	}
+	}*/
 	.bp-multi-nav .bp-header__main,
 	.bp-nav {
 		width: 100%;

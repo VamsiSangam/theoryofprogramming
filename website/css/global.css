@@ -1,0 +1,19 @@
+body {
+    font-size: 1.4em;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.texture-black-linen {
+    background: url('../img/black-Linen.png') !important;
+    background-repeat: repeat;
+}
+
+.texture-dark-mosaic {
+    background: url('../img/dark_mosaic.png') !important;
+    background-repeat: repeat;
+}
+
+.header {
+    background: url('../img/header.jpg') !important;
+    background-position: center;
+}

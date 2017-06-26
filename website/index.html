@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Theory of Programming</title>
 	<link rel="shortcut icon" href="./img/shortcut-icon.png">
-	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
@@ -14,36 +13,30 @@
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
-	<style>
-		body {
-			font-size: 1.4em;
-            font-family: 'Josefin Sans', sans-serif;
-		}
-	</style>
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
 </head>
-
 <body>
 	<!-- Main container -->
 	<div class="bp-multi-nav">
 		<!-- Blueprint header -->
 		<header class="bp-header cf">
-			<div class="dummy-logo z-depth-2">
+			<div class="dummy-logo z-depth-2 texture-dark-mosaic">
 				<i class="fa fa-2x fa-code"></i>
 				<h5>Theory of Programming</h5>
 			</div>
 		</header>
-		<a class="action action--open" aria-label="Open Menu"><i class="fa fa-navicon"></i></a>
-		<nav id="ml-menu" class="menu z-depth-2">
+		<nav id="ml-menu" class="menu z-depth-2 texture-dark-mosaic">
 			<a class="action action--close" aria-label="Close Menu">
 				<i class="fa fa-close"></i>
 			</a>
 			<div class="menu__wrap">
-				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+                <!-- menu-main -->
+				<ul data-menu="menu-main" class="menu__level" tabindex="-1" role="menu" aria-label="Home">
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Home</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-data-structures-and-algorithms" aria-owns="menu-data-structures-and-algorithms" href="#">Data Structures and Algorithms</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java" aria-owns="menu-java" href="#">Java</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">C++</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Interview Corner</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp" aria-owns="menu-cpp" href="#">C++</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-interview-corner" aria-owns="menu-interview-corner" href="#">Interview Corner</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Team</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">GitHub</a></li>
 				</ul>
@@ -115,49 +108,20 @@
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Encapsulation in Java</a></li>
                     <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Constructor and Overloading methods</a></li>
 				</ul>
-				<!-- Submenu 2 -->
-				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Fruits">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Citrus Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Berries</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li>
+                <!-- menu-cpp -->
+				<ul data-menu="menu-cpp" id="menu-cpp" class="menu__level" tabindex="-1" role="menu" aria-label="C++">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp-basics" aria-owns="menu-cpp-basics" href="#">Basics</a></li>
 				</ul>
-				<!-- Submenu 2-1 -->
-				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Exotic Mixes</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Vitamin Boosters</a></li>
+                <!-- menu-cpp-basics -->
+				<ul data-menu="menu-cpp-basics" id="menu-cpp-basics" class="menu__level" tabindex="-1" role="menu" aria-label="C++ Basics">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Why should I learn C++?</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">C++ programming style and structure</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Variables, initialization and assignment</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Writing professional code in C++</a></li>
 				</ul>
-				<!-- Submenu 3 -->
-				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Grains">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Buckwheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Millet</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quinoa</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Rice</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Durum Wheat</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li>
-				</ul>
-				<!-- Submenu 3-1 -->
-				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
-				</ul>
-				<!-- Submenu 4 -->
-				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Mylk &amp; Drinks">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Grain Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Seed Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nutri Drinks</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
-				</ul>
-				<!-- Submenu 4-1 -->
-				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Nut Mylk Packs</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Amino Acid Heaven</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Allergy Free</a></li>
+                <!-- menu-interview-corner -->
+				<ul data-menu="menu-interview-corner" id="menu-interview-corner" class="menu__level" tabindex="-1" role="menu" aria-label="Interview Corner">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays Interview Questions</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -166,9 +130,14 @@
 
 	<!-- content -->
 	<div class="content">
-		<div class="row light-blue darken-3 white-text z-depth-2" style="margin-bottom: 0px;">
+        <div class="fixed-action-btn nav-toggle-btn z-depth-2">
+            <a class="waves-effect waves-light btn-floating btn-large red action action--open" aria-label="Open Menu">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+		<div class="row light-blue darken-3 white-text z-depth-2 header">
 			<div class="container valign-wrapper" style="height:350px;">
-				<div class="col s10">
+				<div class="col s12 m9">
 					<h3>Theory of Programming</h3>
 					<p>
 						Programming Simplified!
@@ -178,8 +147,8 @@
 					<a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
 					<a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
 				</div>
-				<div class="col s2">
-					<img src="./img/development.png" alt="development" style="height: 256px; width:256px;"/>
+				<div class="col m3">
+					<img class="responsive-img" src="./img/development.png" alt="development"/>
 				</div>
 			</div>
 		</div>
@@ -383,7 +352,7 @@
         </div>
 	</div>
 	<script src="js/classie.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/multi-level-menu.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 	<script>
