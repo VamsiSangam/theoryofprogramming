@@ -275,6 +275,17 @@
 	padding-top: 0px;
 }
 
+#ml-menu-logo, #ml-menu {
+	transition: 0.5s;
+	z-index: 10;
+	margin-left: -300px;
+}
+
+.content {
+	transition: margin-left 0.5s;
+	margin-left: 0px;
+}
+
 @media screen and (max-width: 40em) {
 	/*.bp-multi-nav .bp-header {
 		padding-top: 3em;
@@ -293,5 +304,9 @@
 	body,.content {
 		height: auto;
 		overflow: auto;
+	}
+
+	.content {
+		margin-left: 0px;
 	}
 }

@@ -19,12 +19,16 @@
 	<!-- Main container -->
 	<div class="bp-multi-nav">
 		<!-- Blueprint header -->
-		<header class="bp-header cf">
-			<div class="dummy-logo z-depth-2 texture-dark-mosaic">
-				<i class="fa fa-2x fa-code"></i>
-				<h5>Theory of Programming</h5>
-			</div>
-		</header>
+        <div id="ml-menu-logo" class="dummy-logo z-depth-2 texture-dark-mosaic">
+            <i class="fa fa-2x fa-code"></i>
+            <h5>Theory of Programming</h5>
+        </div>
+		<!--<header class="bp-header cf">
+            <div class="dummy-logo z-depth-2 texture-dark-mosaic">
+                <i class="fa fa-2x fa-code"></i>
+                <h5>Theory of Programming</h5>
+            </div>
+		</header>-->
 		<nav id="ml-menu" class="menu z-depth-2 texture-dark-mosaic">
 			<a class="action action--close" aria-label="Close Menu">
 				<i class="fa fa-close"></i>
@@ -129,31 +133,26 @@
 	<!-- /view -->
 
 	<!-- content -->
-	<div class="content">
-        <div class="fixed-action-btn nav-toggle-btn z-depth-2">
-            <a class="waves-effect waves-light btn-floating btn-large red action action--open" aria-label="Open Menu">
+	<div class="content row">
+        <div class="fixed-action-btn nav-toggle-btn">
+            <a class="waves-effect waves-light btn-floating btn-large red action action--open z-depth-2" aria-label="Open Menu" id="menu-toggle-btn">
                 <i class="fa fa-navicon"></i>
             </a>
         </div>
-		<div class="row light-blue darken-3 white-text z-depth-2 header">
+		<div class="col s12 white-text z-depth-2 header" style="z-index:2;">
 			<div class="container valign-wrapper" style="height:350px;">
-				<div class="col s12 m9">
-					<h3>Theory of Programming</h3>
+				<div class="col s12 center-align">
+					<h2 style="margin-top:0px;">Theory of Programming</h2>
 					<p>
 						Programming Simplified!
-						<br>Learn a topic in just 10 minutes!
-						<br>Open source tutorials from the best devs in the internet.
+						<br>Open source tutorials from the best devs in the internet!
 					</p>
 					<a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
 					<a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
 				</div>
-				<div class="col m3">
-					<img class="responsive-img" src="./img/development.png" alt="development"/>
-				</div>
 			</div>
 		</div>
-		<br>
-		<div class="row">
+		<div class="col s12" style="padding-top:25px; z-index:1;">
             <div class="col m1 l1 hide-on-small-only"></div>
             <div class="col s12 m10 l10">
                 Theory of Programming is a very helpful website that helps you in understanding
@@ -161,7 +160,7 @@
                 concept. Theory of Programming also has posts on solving competitive coding questions which are based on data structures and algorithms discussed in the website. These help you not only to be a hero in your classroom but also a legend
                 in the coding websites such as CodeChef, SPOJ, etc.
                 <h4>Latest Posts</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2016/11/06/dynamic-programming-edit-distance/">Dynamic Programming - Edit Distance</a>
                     </li>
@@ -179,13 +178,13 @@
                     </li>
                 </ul>
                 <h4>Interview Corner</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2015/10/05/arrays-interview-questions/">Arrays</a>
                     </li>
                 </ul>
                 <h4>Graph Theory</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/graph-theory-basics/">Graph Theory Basics</a> 📈 One of Top Viewed!</li>
                     <li>
@@ -228,7 +227,7 @@
                     </li>
                 </ul>
                 <h4>Tree and Heap Data Structures</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/binary-indexed-tree-or-fenwick-tree/">Binary Indexed Tree or Fenwick Tree</a>
                     </li>
@@ -257,7 +256,7 @@
                     </li>
                 </ul>
                 <h4>Dynamic Programming</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2015/03/02/dynamic-programming-introduction-and-fibonacci-numbers/">Dynamic Programming Introduction and Fibonacci Numbers</a>
                     </li>
@@ -269,7 +268,7 @@
                     </li>
                 </ul>
                 <h4>Search Algorithms</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/">Binary Search Algorithm</a>
                     </li>
@@ -278,7 +277,7 @@
                     </li>
                 </ul>
                 <h4>Sorting Algorithms</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2015/01/20/quick-sort/">Quick Sort</a>
                     </li>
@@ -287,7 +286,7 @@
                     </li>
                 </ul>
                 <h4>Java Programming Tutorials</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2015/05/26/java-an-introduction/">An Introduction</a>
                     </li>
@@ -317,7 +316,7 @@
                     </li>
                 </ul>
                 <h4>C++ Programming Tutorials</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2015/12/23/why-should-i-learn-c/">Why should I learn C++?</a>
                     </li>
@@ -332,29 +331,33 @@
                     </li>
                 </ul>
                 <h4>Math</h4>
-                <ul>
+                <ul class="browser-default">
                     <li>
                         <a href="http://theoryofprogramming.com/2014/12/24/number-theory-modular-arithmetic/">Modular Arithmetic</a>
                     </li>
                 </ul>
-                <h4>Express your support by liking our Facebook Page!</h4>
-                Did Theory of Programming help you with programming..? If yes, then, express your support by liking our Facebook page and sharing it with your friends. Let the knowledge flow..! The more you share, the more you get..! ;)
-                <div class="fb-page" data-width="500" data-href="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc" data-height="600" data-small-header="false" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="true"
-                    data-show-posts="true">
-                    <div class="fb-xfbml-parse-ignore">
-                        <blockquote cite="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc">
-                            <a href="https://www.facebook.com/pages/Theory-of-Programming/886385758049299?pnref=lhc">Theory of Programming</a>
-                        </blockquote>
-                    </div>
-                </div>
             </div>
             <div class="col m1 l1 hide-on-small-only"></div>
         </div>
+        <div class="col s12 white-text footer" style="box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.14);">
+			<div class="container valign-wrapper" style="height:350px;">
+				<div class="col s12 center-align">
+					<h2 style="margin-top:0px;">Theory of Programming</h2>
+					<p>
+						Programming Simplified!
+						<br>Open source tutorials from the best devs in the internet!
+					</p>
+					<a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
+					<a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="js/classie.js"></script>
 	<script src="js/multi-level-menu.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/getEmPixels.min.js"></script>
 	<script>
 	(function() {
 		var menuEl = document.getElementById('ml-menu'),
@@ -369,6 +372,7 @@
 		// mobile menu toggle
 		var openMenuCtrl = document.querySelector('.action--open'),
 			closeMenuCtrl = document.querySelector('.action--close');
+        var navOpened = true;
 
 		openMenuCtrl.addEventListener('click', openMenu);
 		closeMenuCtrl.addEventListener('click', closeMenu);
@@ -381,7 +385,7 @@
 		function closeMenu() {
 			classie.remove(menuEl, 'menu--open');
 			openMenuCtrl.focus();
-			//document.body.style.marginLeft = "0px";
+            navOpened = false;
 		}
 
 		// simulate grid content loading
@@ -398,6 +402,36 @@
 				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
 			}, 700);
 		}
+        
+        $('#menu-toggle-btn').click(function() {
+            if (window.innerWidth >= 40 * getEmPixels()) {
+                console.log("40em = " + (40 * getEmPixels()));
+                console.log("window.innerWidth = " + window.innerWidth);
+
+                if (navOpened) {
+                    $('#ml-menu-logo').css('margin-left', '0px');
+                    $('#ml-menu').css('margin-left', '0px');
+                    //$('.content').css('margin-left', '0px');
+                    navOpened = false;
+                } else {
+                    $('#ml-menu-logo').css('margin-left', '-300px');
+                    $('#ml-menu').css('margin-left', '-300px');
+                    //$('.content').css('margin-left', '300px');
+                    navOpened = true;
+                }
+            } else {
+                if (!navOpened) {
+                    $('#ml-menu-logo').width('100%');
+                    $('#ml-menu').width('100%');
+                    navOpened = true;
+                } else {
+
+                }
+            }
+        });
+
+        //$('#menu-toggle-btn').click();
+        //$('.content').css('margin-left', '0px');
 	})();
 	</script>
 </body>
