@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Theory of Programming</title>
+	<link rel="shortcut icon" href="../../../../../img/shortcut-icon.png">
+	<link rel="stylesheet" type="text/css" href="../../../../../css/component.css" />
+	<script src="../../../../../js/modernizr-custom.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../../../../../css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../css/global.css" />
+</head>
+<body class="texture-crossword">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.9&appId=1599529033646382";
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+	<!-- Main container -->
+	<div class="bp-multi-nav">
+		<!-- Blueprint header -->
+        <div id="ml-menu-logo" class="dummy-logo z-depth-2 texture-dark-mosaic">
+            <i class="fa fa-2x fa-code"></i>
+            <h5>Theory of Programming</h5>
+        </div>
+		<nav id="ml-menu" class="menu z-depth-2 texture-dark-mosaic">
+			<a class="action action--close" aria-label="Close Menu">
+				<i class="fa fa-close"></i>
+			</a>
+			<div class="menu__wrap">
+                <!-- menu-main -->
+				<ul data-menu="menu-main" class="menu__level" tabindex="-1" role="menu" aria-label="Home">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Home</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-data-structures-and-algorithms" aria-owns="menu-data-structures-and-algorithms" href="#">Data Structures and Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java" aria-owns="menu-java" href="#">Java</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp" aria-owns="menu-cpp" href="#">C++</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-interview-corner" aria-owns="menu-interview-corner" href="#">Interview Corner</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Team</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">GitHub</a></li>
+				</ul>
+				<!-- menu-data-structures-and-algorithms -->
+				<ul data-menu="menu-data-structures-and-algorithms" id="menu-data-structures-and-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Data Structures and Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-graph-theory" aria-owns="menu-graph-theory" href="#">Graph Theory</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-tree-data-structures" aria-owns="menu-tree-data-structures" href="#">Tree Data Structures</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-dynamic-programming" aria-owns="menu-dynamic-programming" href="#">Dynamic Programming</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-searching-algorithms" aria-owns="menu-searching-algorithms" href="#">Searching Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-sorting-algorithms" aria-owns="menu-sorting-algorithms" href="#">Sorting Algorithms</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-math" aria-owns="menu-math" href="#">Math</a></li>
+				</ul>
+				<!-- menu-graph-theory -->
+				<ul data-menu="menu-graph-theory" id="menu-graph-theory" class="menu__level" tabindex="-1" role="menu" aria-label="Graph Theory">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Graph Theory Basics</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Breadth First Search (BFS) Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Snakes and Ladders Game Code</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Depth First Search</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bellman Ford Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Prim's Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dijkstra's Algorithm</a></li>
+				</ul>
+                <!-- menu-tree-data-structures -->
+				<ul data-menu="menu-tree-data-structures" id="menu-tree-data-structures" class="menu__level" tabindex="-1" role="menu" aria-label="Tree Data Structures">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Indexed Tree (or) Fenwick Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Trie Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Compressed Trie Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Segment Tree</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Heap and Heap sort algorithm</a></li>
+				</ul>
+                <!-- menu-dynamic-programming -->
+				<ul data-menu="menu-dynamic-programming" id="menu-dynamic-programming" class="menu__level" tabindex="-1" role="menu" aria-label="Dynamic Programming">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Introduction and Fibonacci Numbers</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Kadane's Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Edit Distance</a></li>
+				</ul>
+                <!-- menu-searching-algorithms -->
+				<ul data-menu="menu-searching-algorithms" id="menu-searching-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Searching Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Binary Search Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Jump Search Algorithm</a></li>
+				</ul>
+                <!-- menu-sorting-algorithms -->
+				<ul data-menu="menu-sorting-algorithms" id="menu-sorting-algorithms" class="menu__level" tabindex="-1" role="menu" aria-label="Sorting Algorithms">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Quick Sort Algorithm</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Merge Sort Algorithm</a></li>
+				</ul>
+                <!-- menu-math -->
+				<ul data-menu="menu-math" id="menu-math" class="menu__level" tabindex="-1" role="menu" aria-label="Math">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Modular Arithmetic Properties</a></li>
+				</ul>
+                <!-- menu-java -->
+				<ul data-menu="menu-java" id="menu-java" class="menu__level" tabindex="-1" role="menu" aria-label="Java">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-language-basics" aria-owns="menu-java-language-basics" href="#">Language Basics</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-java-introduction-to-oop" aria-owns="menu-java-introduction-to-oop" href="#">Introduction to OOP</a></li>
+				</ul>
+                <!-- menu-java-language-basics -->
+				<ul data-menu="menu-java-language-basics" id="menu-java-language-basics" class="menu__level" tabindex="-1" role="menu" aria-label="Language Basics">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">An Introduction</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Data types, Input and Operators</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">If-else, switch and loops</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">String, StringBuilder and StringBuffer</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Enum and methods in Java</a></li>
+				</ul>
+                <!-- menu-java-introduction-to-oop -->
+				<ul data-menu="menu-java-introduction-to-oop" id="menu-java-introduction-to-oop" class="menu__level" tabindex="-1" role="menu" aria-label="Introduction to OOP">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Classes and Objects</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Encapsulation in Java</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Constructor and Overloading methods</a></li>
+				</ul>
+                <!-- menu-cpp -->
+				<ul data-menu="menu-cpp" id="menu-cpp" class="menu__level" tabindex="-1" role="menu" aria-label="C++">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="menu-cpp-basics" aria-owns="menu-cpp-basics" href="#">Basics</a></li>
+				</ul>
+                <!-- menu-cpp-basics -->
+				<ul data-menu="menu-cpp-basics" id="menu-cpp-basics" class="menu__level" tabindex="-1" role="menu" aria-label="C++ Basics">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Why should I learn C++?</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">C++ programming style and structure</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Variables, initialization and assignment</a></li>
+                    <li class="menu__item" role="menuitem"><a class="menu__link" href="#">Writing professional code in C++</a></li>
+				</ul>
+                <!-- menu-interview-corner -->
+				<ul data-menu="menu-interview-corner" id="menu-interview-corner" class="menu__level" tabindex="-1" role="menu" aria-label="Interview Corner">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Arrays Interview Questions</a></li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<!-- /view -->
+
+	<!-- content -->
+	<div class="content row">
+        <div class="fixed-action-btn nav-toggle-btn">
+            <a class="waves-effect waves-light btn-floating btn-large red action action--open z-depth-2" aria-label="Open Menu" id="menu-toggle-btn">
+                <i class="fa fa-navicon"></i>
+            </a>
+        </div>
+		<div class="col s12 white-text z-depth-2 header">
+			<div class="container valign-wrapper" style="height:350px;">
+				<div class="col s12 center-align">
+					<h2 style="margin-top:0px;">Theory of Programming</h2>
+					<p>
+						Programming Simplified!
+						<br>Open source tutorials from the best devs in the internet!
+					</p>
+					<a class="waves-effect waves-d btn white black-text"><i class="fa fa-github"></i> &nbsp; GitHub</a> &nbsp;
+					<a class="waves-effect waves-light btn blue darken-3"><i class="fa fa-facebook"></i> &nbsp; Facebook</a>
+				</div>
+			</div>
+		</div>
+		<div class="col s12" style="padding-top:25px;">
+            <div class="col m1 l1 hide-on-small-only"></div>
+            <div class="col s12 m10 l10">
+                <h3>Graph Theory Basics</h3>
+                Hello people...! In this post, I will talk about Graph Theory Basics, which are its terminologies, types and implementations in C. Graphs are difficult to code, but they have the most interesting real-life applications. When you want to talk about the real-life applications of graphs, you just cannot resist talking about the Facebook's Graph Search! Now, I don't really know that algorithm, but it uses graphs to find out your closest friends, or any other associations you have with the other users.
+                Other applications include finding the shortest paths, and by shortest path, I mean in the "universal sense", it could be the shortest path of a Traveling Salesman, or the shortest path to win Snake and Ladder or even the shortest way to solve the Rubik's Cube...! Amazing, right...?! So, let's get started...!
+                Graphs are much clear when defined in mathematical terms. A Graph <strong>G (V, E)</strong>, consists of two sets,
+
+                <ul>
+                    <li>Set of Vertices, <strong>V</strong></li>
+                    <li>Set of Edges, <strong>E</strong></li>
+                </ul>
+                
+                As the name suggest, <strong>V</strong>, is the set of vertices or, the set of all nodes in a given graph and <strong>E</strong>, is the set of all the edges between these nodes, or the associations between them. So, <strong>|V|</strong> denotes the number of nodes in a graph and <strong>|E|</strong> denotes the number of edges. Let us take up a small example to understand these terms -
+                
+                <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph1.jpg">
+                    <img class="wp-image-34 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Undirected and Directed Graph" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph1.jpg" alt="Undirected and Directed Graph" width="635" height="983" />
+                </a>
+                
+                As you can see, we have two types of graphs, <strong>Directed</strong> and <strong>Undirected Graphs</strong>. In <strong>Undirected Graphs</strong>,the direction for an edge is not defined. This is generally used to indicate that the edge is actually bi-directional in nature, i.e, one can go from V<sub>1</sub> → V<sub>2</sub>, as well as from V<sub>2</sub> → V<sub>1</sub>. This is used to represent the graph where the states (nodes) are re-doable, such as, in a Rubik's Cube, you can go from one configuration of the cube to the other as well as the vice-versa.
+                The other type, the <strong>Directed Graph</strong> restricts the... "traversal", if you say... to only one direction. For example, in the Snakes and Ladders game, you can play dice and go from Position 5 → Position 10, but you can't roll the dice such that it gets you from Position 10 ← Position 5... That's obvious...! So, it really depends on the requirement of the situation, which graph you choose. Generally, we only have to deal with graphs which are purely Directed or purely Undirected. We do not talk about the hybrid type. Some of the other type of graphs are shown below -
+
+                <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph2.jpg">
+                    <img class="wp-image-35 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Types of Graphs" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph2.jpg" alt="Types of Graphs" width="917" height="1700" />
+                </a>
+
+                All the graphs which we have discussed till now are <strong>Simple Graphs</strong>, they do not contain any loops. The ones which do contain loops are <strong>Non-Simple</strong>. A given graph <strong>G</strong> can be drawn in any way as long as the sets <strong>V</strong> and <strong>E</strong> remain the same. Such a graph is shown in the figure. The same graph is just drawn differently, they both have the same set of vertices and edges. Such graphs are called as <strong>Isomorphic Graphs</strong>, as the name suggests "iso" means "same", "morphic" means "shape", the graphs which have the same shape.
+                All these Graphs are <strong>Connected Graphs</strong>, i.e., for any given pair of vertices V<sub>1</sub> and V<sub>2</sub> ∈ <strong>V</strong>, there always exists a path between these two vertices. The last graph is the <strong>Weighted Graph</strong>. Here, the edges are given "weights". To understand a Weighted Graph, you can think of the vertices as cities and the edges as the distance between them (so they will have some value). You could be asked the shortest path between two cities. So in the context of a Weighted graph, the shortest path may not be the one with least edges. One must keep that in mind.
+                Now, we will look at the way the graphs are implemented. There are mainly two ways to implement graphs, they are -
+                
+                <ul class="browser-default">
+                    <li>Adjacency Matrix</li>
+                    <li>Adjacency List</li>
+                </ul>
+
+                <h4>Adjacency Matrix</h4>
+                
+                It is a very simple representation where we take a two-dimensional matrix of the size <strong>|V| × |V|</strong>, i.e., the declaration in C would look like,
+
+                <br><br>
+                [code language="cpp"]
+                int AdjacencyMatrix[V + 1][V + 1];
+                [/code]
+                <br><br>
+
+                As the arrays are zero-indexed, we generally prefer to keep the sizes <em>V + 1</em>.Now, initially all the values would be zeroes. We put '1' in an element of the two-dimensional array, <em>AdjacencyMatrix[i][j]</em>, if there exists an edge between V<sub>i</sub> → V<sub>j</sub>. Remember, arrays are zero-indexed. Let us take an example to understand this,
+
+                <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg">
+                    <img class="wp-image-36 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency Matrix" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg" alt="Adjacency Matrix" width="656" height="2063" />
+                </a>
+
+                I hope it is clear from the example, how we can represent the graph using an Adjacency Matrix. It is very easy to code. All you have to do is create a two-dimensional matrix and assign the values, so, I won't post the code, but if you have any doubts regarding the code, feel free to comment them. The Adjacency Matrix has its pros and cons which we will discuss shortly.
+                
+                <h4>Adjacency List</h4>
+                
+                It is an array of pointers of size <strong>|V| + 1</strong>, where each pointer points to a linked list. The linked list holds the nodes which are adjacent to the <strong>i<sup>th</sup></strong> vertex. By adjacent, we mean those vertices that can be accessed from i<sup>th</sup> node by making a single move. It is a little complex implementation if you are uncomfortable with linked lists. But it is this implementation that we will use for Graph Search Algorithms. This is because we can easily and efficiently know which of the vertices of <strong>V</strong> are neighbours of a given vertex. And that is what you want, if your are to do a Graph Search. Now, let us take an example to understand the concept of Adjacency Lists.
+
+                <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph4.jpg">
+                    <img class="wp-image-37 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency List" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph4.jpg" alt="Adjacency List" width="905" height="1066" />
+                </a>
+
+                I hope the sketch has made it clear as to how we use the Adjacency List to implement a Graph. As I mentioned before, it is one of the most versatile implementations of the Graph Data Structure. Now, try to code the implementation in C, or any language you like. Please try this at least once by yourself so that you can get brain deep into the Graph Data Structure. It is only a linked list. And one more thing, don't get confused between pointer-to-an-array and array-of-pointers...! So, if we put the value of <strong>|V| + 1</strong> in a variable '<em>vertices</em>', now the declaration of our Adjacency List would be,
+
+                <br><br>
+                [code language="cpp"]
+                struct node * adjacency_list[vertices];
+                [/code]
+                <br><br>
+
+                Remember this is an "array of pointers", the declaration for "pointer to an array" would look like,
+
+                <br><br>
+                [code language="cpp"]
+                struct node (* adjcency_list)[vertices];
+                [/code]
+                <br><br>
+
+                This is due to operator precedence. Some people make mistakes here, so, watch out! If you want to code in C++, we can have a vector where each element of the vector can hold another vector or a list, so, the declaration would be, like,
+
+                <br><br>
+                [code language="cpp"]
+                vector< list< int > > adjacencyList(vertices + 1);
+                [/code]
+                <br><br>
+
+                Try to code for an hour or two... If you don't get the code, it's ok...! I've put my C code below. Those who got the code right... You are fabulous...! ;) ... But please take a minute to go through my code, I might have written a slightly better code than yours.
+
+                [su_tabs]
+
+                [su_tab title="C"]
+                <pre class="dynamic-prism language-c line-numbers">
+                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C/adjacency-list.c"></code>
+                </pre>
+                [/su_tab]
+
+                [su_tab title="C++ STL"]
+                <pre class="dynamic-prism language-cpp line-numbers">
+                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%2B%2B/adjacency-list-using-stl.cpp"></code>
+                </pre>
+                [/su_tab]
+
+                [su_tab title="Java"]
+                <pre class="dynamic-prism language-java line-numbers">
+                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/Java/AdjacencyList.java"></code>
+                </pre>
+                [/su_tab]
+
+                [su_tab title="C#"]
+                <pre class="dynamic-prism language-csharp line-numbers">
+                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%23/AdjacencyList.cs"></code>
+                </pre>
+                [/su_tab]
+
+                [/su_tabs]
+
+                <h4>Other implementations of Adjacency List</h4>
+                
+                <ul class="browser-default">
+                    <li><strong><a href="http://theoryofprogramming.com/adjacency-list-using-cpp-stl/">Adjacency List using C++ STL</a></strong></li>
+                    <li><strong><a href="http://theoryofprogramming.com/adjacency-list-in-java/">Adjacency List in Java</a></strong></li>
+                    <li><strong><a href="http://theoryofprogramming.com/adjacency-list-in-c-sharp/">Adjacency List in C#</a></strong></li>
+                </ul>
+                
+                <h4>Comparison between Adjacency Matrix and Adjacency List -</h4>
+
+                <table class="bordered highlight">
+                    <thead>
+                        <tr>
+                            <th>Adjacency Matrix</th>
+                            <th>Adjacency List</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>For a Directed Graph, it consumes <em>O(|V|<sup>2</sup>)</em> space which is often under-utilized in the implementation. For an Undirected Graph also, it consumes <em>O(|V|<sup>2</sup>)</em> space which is also under-utilized as the generated matrix is symmetric about diagonal and values just repeat.</td>
+                            <td>For a Directed Graph it consumes <em>O(|V| + |E|)</em> space which is less, and is utilized optimally. For an Undirected Graph it consumes <em>O(|V| + 2 ✗ |E|)</em> space, which is <em>O(|V| + |E|)</em>, which is less.</td>
+                        </tr>
+                        <tr>
+                            <td>As the memory allocation is contiguous, data access is slightly faster.</td>
+                            <td>It is basically a Linked List, so memory allocation is not contiguous, hence traversal is slow as as compared to the traversal in an array. However, this can be eliminated if we use a Vector of C++ STL Library in the place of the Linked List. But C++ STL Vector is not recommended for graphs that keep growing.</td>
+                        </tr>
+                        <tr>
+                            <td>Inserting an edge takes <em>O(1)</em> time, i.e., constant time. Therefore, inserting |E| edges take <em>O(|E|)</em> time, as direct access is available.</td>
+                            <td>Inserting an edge can take <em>O(|E|)</em> in the worst case, which is, there is an edge between every pair of vertices, one must traverse the whole Linked List over-and-over causing insertion of |E| nodes to take <em>O(|E|<sup>2</sup>)</em> time. However, if one follows Head Insertion, inserting a node will take O(1) time, and inserting |E| nodes will take <em>O(|E|)</em> time.</td>
+                        </tr>
+                        <tr>
+                            <td>Deleting an edge is very simple, we just set the corresponding element value to 0, which takes <em>O(1)</em> time.</td>
+                            <td>Deleting an edge is time-taking as, one would have to traverse the Linked List, which is slow (non-contiguous). In the worst case, it takes <em>O(|E|)</em> time.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <br><br>
+                &nbsp;
+
+                With the knowledge of Adjacency Matrix and Adjacency List alone you won't be able to do the competitive programming questions, because you do not know how to explore your graph to get the desired result. For this, you need to know the <strong><a href="http://theoryofprogramming.com/2014/12/25/graph-theory-breadth-first-search/">Breadth First Search (BFS) Algorithm</a></strong> and the <strong><a href="http://theoryofprogramming.com/2014/12/26/graph-theory-depth-first-search/">Depth First Search (DFS) Algorithm</a></strong>. This post is only to give an introduction. Feel free to comment your doubts..! Keep practising.... Happy Coding...! :)
+                <br><br>
+            </div>
+            <div class="col m1 l1 hide-on-small-only"></div>
+        </div>
+        <!-- facebook comments plugin -->
+        <br>
+        <div class="col s12">
+            <div class="col m1 l1 hide-on-small-only"></div>
+            <div class="col s12 m10 l10">
+                <div class="divider"></div>
+                <div class="section">
+                    <h4>Comments</h4>
+                    <div class="fb-comments" data-href="https://vamsisangam.github.io/theoryofprogramming/" data-width="100%" data-numposts="5"></div>
+                </div>
+            </div>
+            <div class="col m1 l1 hide-on-small-only"></div>
+        </div>
+        <div class="col s12 white-text footer" style="box-shadow: 0 -4px 4px 0 rgba(0,0,0,0.14);">
+			<div class="container valign-wrapper" style="padding-top:30px; padding-bottom:30px;">
+				<div class="row">
+                    <div class="col s12 center-align">
+                        <h2 style="margin-top:0px;">Theory of Programming</h2>
+                    </div>
+                    <div class="col l4 m4 s12 center-align">
+                        <br>
+                        This website is only lacking your support! Support us by liking and sharing Theory of Programming on Facebook!
+                        <br><br>
+                        <div class="fb-like" data-href="https://www.facebook.com/TheoryOfProgramming" data-layout="button_count" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
+                    </div>
+                    <div class="col l4 m4 s12 center-align">
+                        <br>
+                        Theory of Programming is open source! Contribute by starring and forking Theory of Programming on GitHub!
+                        <br><br>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a aria-label="Star vamsisangam/theoryofprogramming on GitHub" data-show-count="true" data-size="large" href="https://github.com/vamsisangam/theoryofprogramming" class="github-button">Star</a>
+                        <!-- Place this tag where you want the button to render. -->
+                        <a aria-label="Fork vamsisangam/theoryofprogramming on GitHub" data-show-count="true" data-size="large" href="https://github.com/vamsisangam/theoryofprogramming/fork" class="github-button">Fork</a>
+                    </div>
+                    <div class="col l4 m4 s12 center-align">
+                        <br>
+                        Donate to Theory of Programming on PayPal. Your donation will help cover domain and server costs.
+                        <br><br>
+                        <a class="waves-effect waves-d btn green"><i class="fa fa-paypal"></i> &nbsp; Donate</a> &nbsp;
+                    </div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../../../../js/classie.js"></script>
+	<script src="../../../../../js/multi-level-menu.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../../../../../js/getEmPixels.min.js"></script>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script>
+	(function() {
+		var menuEl = document.getElementById('ml-menu'),
+			mlmenu = new MLMenu(menuEl, {
+				breadcrumbsCtrl : false, // show breadcrumbs
+				// initialBreadcrumb : 'all', // initial breadcrumb text
+				backCtrl : true, // show back button
+				// itemsDelayInterval : 60, // delay between each menu item sliding animation
+				// onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
+			});
+
+		// mobile menu toggle
+		var openMenuCtrl = document.querySelector('.action--open'),
+			closeMenuCtrl = document.querySelector('.action--close');
+        var navOpened = true;
+
+		openMenuCtrl.addEventListener('click', openMenu);
+		closeMenuCtrl.addEventListener('click', closeMenu);
+
+		function openMenu() {
+			classie.add(menuEl, 'menu--open');
+			closeMenuCtrl.focus();
+		}
+
+		function closeMenu() {
+			classie.remove(menuEl, 'menu--open');
+			openMenuCtrl.focus();
+            navOpened = false;
+		}
+
+		// simulate grid content loading
+		var gridWrapper = document.querySelector('.content');
+
+		function loadDummyData(ev, itemName) {
+			ev.preventDefault();
+
+			closeMenu();
+			gridWrapper.innerHTML = '';
+			classie.add(gridWrapper, 'content--loading');
+			setTimeout(function() {
+				classie.remove(gridWrapper, 'content--loading');
+				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
+			}, 700);
+		}
+        
+        $('#menu-toggle-btn').click(function() {
+            if (window.innerWidth >= 40 * getEmPixels()) {
+                console.log("40em = " + (40 * getEmPixels()));
+                console.log("window.innerWidth = " + window.innerWidth);
+
+                if (navOpened) {
+                    $('#ml-menu-logo').css('margin-left', '0px');
+                    $('#ml-menu').css('margin-left', '0px');
+                    //$('.content').css('margin-left', '0px');
+                    navOpened = false;
+                } else {
+                    $('#ml-menu-logo').css('margin-left', '-300px');
+                    $('#ml-menu').css('margin-left', '-300px');
+                    //$('.content').css('margin-left', '300px');
+                    navOpened = true;
+                }
+            } else {
+                if (!navOpened) {
+                    $('#ml-menu-logo').width('100%');
+                    $('#ml-menu').width('100%');
+                    navOpened = true;
+                } else {
+
+                }
+            }
+        });
+
+        //$('#menu-toggle-btn').click();
+        //$('.content').css('margin-left', '0px');
+	})();
+	</script>
+</body>
+
+</html>
