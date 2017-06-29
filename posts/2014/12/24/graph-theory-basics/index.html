@@ -11,6 +11,9 @@
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" />
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/themes/prism-coy.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../../../../../css/demo.css" />
     <link rel="stylesheet" type="text/css" href="../../../../../css/global.css" />
@@ -194,12 +197,10 @@
                 It is a very simple representation where we take a two-dimensional matrix of the size <strong>|V| × |V|</strong>, i.e., the declaration in C would look like,
 
                 <br><br>
-                [code language="cpp"]
-                int AdjacencyMatrix[V + 1][V + 1];
-                [/code]
+                <code class="language-java">int AdjacencyMatrix[V + 1][V + 1];</code>
                 <br><br>
 
-                As the arrays are zero-indexed, we generally prefer to keep the sizes <em>V + 1</em>.Now, initially all the values would be zeroes. We put '1' in an element of the two-dimensional array, <em>AdjacencyMatrix[i][j]</em>, if there exists an edge between V<sub>i</sub> → V<sub>j</sub>. Remember, arrays are zero-indexed. Let us take an example to understand this,
+                As the arrays are zero-indexed, we generally prefer to keep the sizes <code class="language-java">V + 1</code>.Now, initially all the values would be zeroes. We put '1' in an element of the two-dimensional array, <code class="language-java">AdjacencyMatrix[i][j]</code>, if there exists an edge between <code>V<sub>i</sub> → V<sub>j</sub></code>. Remember, arrays are zero-indexed. Let us take an example to understand this,
 
                 <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg">
                     <img class="wp-image-36 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency Matrix" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg" alt="Adjacency Matrix" width="656" height="2063" />
@@ -241,33 +242,32 @@
 
                 Try to code for an hour or two... If you don't get the code, it's ok...! I've put my C code below. Those who got the code right... You are fabulous...! ;) ... But please take a minute to go through my code, I might have written a slightly better code than yours.
 
-                [su_tabs]
-
-                [su_tab title="C"]
-                <pre class="dynamic-prism language-c line-numbers">
-                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C/adjacency-list.c"></code>
-                </pre>
-                [/su_tab]
-
-                [su_tab title="C++ STL"]
-                <pre class="dynamic-prism language-cpp line-numbers">
-                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%2B%2B/adjacency-list-using-stl.cpp"></code>
-                </pre>
-                [/su_tab]
-
-                [su_tab title="Java"]
-                <pre class="dynamic-prism language-java line-numbers">
-                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/Java/AdjacencyList.java"></code>
-                </pre>
-                [/su_tab]
-
-                [su_tab title="C#"]
-                <pre class="dynamic-prism language-csharp line-numbers">
-                    <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%23/AdjacencyList.cs"></code>
-                </pre>
-                [/su_tab]
-
-                [/su_tabs]
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#adjacency-list-c">C</a></li>
+                    <li class="tab col s3"><a href="#adjacency-list-cpp-stl">C++ STL</a></li>
+                    <li class="tab col s3"><a class="active" href="#adjacency-list-java">Java</a></li>
+                    <li class="tab col s3"><a href="#adjacency-list-csharp">C#</a></li>
+                </ul>
+                <div id="adjacency-list-c" class="col s12">
+                    <pre class="dynamic-prism language-c line-numbers">
+                        <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C/adjacency-list.c"></code>
+                    </pre>
+                </div>
+                <div id="adjacency-list-cpp-stl" class="col s12">
+                    <pre class="dynamic-prism language-cpp line-numbers">
+                        <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%2B%2B/adjacency-list-using-stl.cpp"></code>
+                    </pre>
+                </div>
+                <div id="adjacency-list-java" class="col s12">
+                    <pre class="dynamic-prism language-java line-numbers">
+                        <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/Java/AdjacencyList.java"></code>
+                    </pre>
+                </div>
+                <div id="adjacency-list-csharp" class="col s12">
+                    <pre class="dynamic-prism language-csharp line-numbers">
+                        <code data-github-raw="https://raw.githubusercontent.com/VamsiSangam/theoryofprogramming/master/Graph%20Theory/Adjcacency%20List/C%23/AdjacencyList.cs"></code>
+                    </pre>
+                </div>
 
                 <h4>Other implementations of Adjacency List</h4>
                 
@@ -365,6 +365,14 @@
     <script type="text/javascript" src="../../../../../js/getEmPixels.min.js"></script>
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/normalize-whitespace/prism-normalize-whitespace.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-java.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-csharp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-c.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/components/prism-cpp.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.6.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
 	<script>
 	(function() {
 		var menuEl = document.getElementById('ml-menu'),
@@ -441,6 +449,18 @@
         //$('.content').css('margin-left', '0px');
 	})();
 	</script>
+    <script>
+        $(document).ready(function() {
+            $('code[data-github-raw^="https://raw.githubusercontent.com/"]').each(function() {
+                var $code = $(this);
+
+                $.get($code.attr('data-github-raw'), function(data) {
+                    $code.text(data);
+                    Prism.highlightAll();
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
