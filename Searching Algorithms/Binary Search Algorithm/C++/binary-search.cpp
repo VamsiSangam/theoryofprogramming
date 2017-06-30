@@ -4,19 +4,17 @@ Theory of Programming
 
 Binary Search Algorithm
 http://theoryofprogramming.com/2016/11/04/binary-search-algorithm/
-GitHub - https://github.com/salman-bhai/theoryofprogramming
-Code Contributor - <salman-bhai>
+GitHub - https://github.com/VamsiSangam/theoryofprogramming
+Code Contributor - Praveen Mylavarapu (github.com/praveenmylavarapu, saipraveen.ml)
 
 ===== ===== ===== */
-// Includes all header files required for C++ functions
-#include <bits/stdc++.h>
+
+#include <iostream>
+#include <vector>
 using namespace std;
 
-// Variable declaration
-vector<int> v;
-
 // Main Binary Search logic
-int binary(int key) {
+int binarySearch(vector<int> v,int key) {
 	int first = 0;
 	int last = v.size() - 1;
 
@@ -41,8 +39,13 @@ int binary(int key) {
 }
 
 int main() {
+
+    // Variable declaration
+    vector<int> v;
+
 	// Enter number of elements in the vector
 	int n, temp;
+	cout<<"Enter the number of elements: ";
 	cin >> n;
 
 	// Enter the elements in the vector
@@ -55,15 +58,15 @@ int main() {
 	int key;
 	cin >> key;
 
-	int x = binary(key);
+	int x = binarySearch(v,key);
 
 	// In case -1 is found, means key isn't present
 	if(x == -1) {
-		printf("Key not found!\n");
+		cout<<"Key not found!"<<endl;
 	}
 	// If -1 isn't returned, key is found!
 	else {
-		printf("Key found at position %d\n",x + 1);
+		cout<<"Key found at position "<< x + 1 <<endl;
 	}
 	return 0;
 } 
