@@ -20,7 +20,7 @@ int binarySearch(vector<int> v, int val) {
 	int last = v.size() - 1;
 
 	while(first <= last) {
-		int mid = ((first + last) / 2);
+		int mid = last + (first - last) / 2;
 		// If the middle element is the value, return the middle element
 		if(v[mid] == val) {
 			return mid;
@@ -50,7 +50,7 @@ int main() {
 
 	// Enter the elements in the vector
 	cout << "Enter " << n << " elements: ";
-	
+
 	for(int i = 0; i < n ; i ++) {
 		cin >> temp;
 		v.push_back(temp);
