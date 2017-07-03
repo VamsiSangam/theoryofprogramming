@@ -158,90 +158,117 @@
 			</div>
 		</div>
 		<div class="col s12" style="padding-top:25px;">
-            <div class="col m1 l1 hide-on-small-only"></div>
-            <div class="col s12 m10 l10">
+            <div class="container">
                 <h3>Graph Theory Basics</h3>
-                Hello people...! In this post, I will talk about Graph Theory Basics, which are its terminologies, types and implementations in C. Graphs are difficult to code, but they have the most interesting real-life applications. When you want to talk about the real-life applications of graphs, you just cannot resist talking about the Facebook's Graph Search! Now, I don't really know that algorithm, but it uses graphs to find out your closest friends, or any other associations you have with the other users.
-                Other applications include finding the shortest paths, and by shortest path, I mean in the "universal sense", it could be the shortest path of a Traveling Salesman, or the shortest path to win Snake and Ladder or even the shortest way to solve the Rubik's Cube...! Amazing, right...?! So, let's get started...!
-                Graphs are much clear when defined in mathematical terms. A Graph <strong>G (V, E)</strong>, consists of two sets,
-
-                <ul>
+                <p>
+                    Hello people...! In this post, I will talk about Graph Theory Basics, which are its terminologies, types and implementations
+                    in C. Graphs are difficult to code, but they have the most interesting real-life applications. When you want to talk about the
+                    real-life applications of graphs, you just cannot resist talking about the Facebook's Graph Search! Now, I don't really know that
+                    algorithm, but it uses graphs to find out your closest friends, or any other associations you have with the other users.
+                    Other applications include finding the shortest paths, and by shortest path, I mean in the "universal sense", it could be the
+                    shortest path of a Traveling Salesman, or the shortest path to win Snake and Ladder or even the shortest way to solve the Rubik's Cube...!
+                    Amazing, right...?! So, let's get started...!
+                </p>
+                <p>
+                    Graphs are much clear when defined in mathematical terms. A Graph <code class="language-java">G (V, E)</code>, consists of two sets,
+                </p>
+                <ul class="browser-default">
                     <li>Set of Vertices, <strong>V</strong></li>
                     <li>Set of Edges, <strong>E</strong></li>
                 </ul>
-                
-                As the name suggest, <strong>V</strong>, is the set of vertices or, the set of all nodes in a given graph and <strong>E</strong>, is the set of all the edges between these nodes, or the associations between them. So, <strong>|V|</strong> denotes the number of nodes in a graph and <strong>|E|</strong> denotes the number of edges. Let us take up a small example to understand these terms -
-                
+                <p>
+                    As the name suggest, <code class="language-java">V</code>, is the set of vertices or, the set of all nodes in a given graph and
+                    <strong>E</strong>, is the set of all the edges between these nodes, or the associations between them. So, <strong>|V|</strong> denotes
+                    the number of nodes in a graph and <strong>|E|</strong> denotes the number of edges. Let us take up a small example to understand these terms -
+                </p>
                 <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph1.jpg">
-                    <img class="wp-image-34 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Undirected and Directed Graph" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph1.jpg" alt="Undirected and Directed Graph" width="635" height="983" />
+                    <img class="responsive-img" title="Undirected and Directed Graph" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph1.jpg" alt="Undirected and Directed Graph" width="635" height="983" />
                 </a>
-                
-                As you can see, we have two types of graphs, <strong>Directed</strong> and <strong>Undirected Graphs</strong>. In <strong>Undirected Graphs</strong>,the direction for an edge is not defined. This is generally used to indicate that the edge is actually bi-directional in nature, i.e, one can go from V<sub>1</sub> → V<sub>2</sub>, as well as from V<sub>2</sub> → V<sub>1</sub>. This is used to represent the graph where the states (nodes) are re-doable, such as, in a Rubik's Cube, you can go from one configuration of the cube to the other as well as the vice-versa.
-                The other type, the <strong>Directed Graph</strong> restricts the... "traversal", if you say... to only one direction. For example, in the Snakes and Ladders game, you can play dice and go from Position 5 → Position 10, but you can't roll the dice such that it gets you from Position 10 ← Position 5... That's obvious...! So, it really depends on the requirement of the situation, which graph you choose. Generally, we only have to deal with graphs which are purely Directed or purely Undirected. We do not talk about the hybrid type. Some of the other type of graphs are shown below -
-
+                <p>
+                    As you can see, we have two types of graphs, <strong>Directed</strong> and <strong>Undirected Graphs</strong>. In <strong>Undirected Graphs</strong>,
+                    the direction for an edge is not defined. This is generally used to indicate that the edge is actually bi-directional in nature, i.e, one can go from
+                    V<sub>1</sub> → V<sub>2</sub>, as well as from V<sub>2</sub> → V<sub>1</sub>. This is used to represent the graph where the states (nodes) are re-doable,
+                    such as, in a Rubik's Cube, you can go from one configuration of the cube to the other as well as the vice-versa.
+                    The other type, the <strong>Directed Graph</strong> restricts the... "traversal", if you say... to only one direction. For example, in the Snakes and Ladders
+                    game, you can play dice and go from Position 5 → Position 10, but you can't roll the dice such that it gets you from Position 10 ← Position 5... That's obvious...!
+                    So, it really depends on the requirement of the situation, which graph you choose. Generally, we only have to deal with graphs which are purely Directed or purely
+                    Undirected. We do not talk about the hybrid type. Some of the other type of graphs are shown below -
+                </p>
                 <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph2.jpg">
-                    <img class="wp-image-35 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Types of Graphs" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph2.jpg" alt="Types of Graphs" width="917" height="1700" />
+                    <img class="responsive-img" title="Types of Graphs" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph2.jpg" alt="Types of Graphs" width="917" height="1700" />
                 </a>
-
-                All the graphs which we have discussed till now are <strong>Simple Graphs</strong>, they do not contain any loops. The ones which do contain loops are <strong>Non-Simple</strong>. A given graph <strong>G</strong> can be drawn in any way as long as the sets <strong>V</strong> and <strong>E</strong> remain the same. Such a graph is shown in the figure. The same graph is just drawn differently, they both have the same set of vertices and edges. Such graphs are called as <strong>Isomorphic Graphs</strong>, as the name suggests "iso" means "same", "morphic" means "shape", the graphs which have the same shape.
-                All these Graphs are <strong>Connected Graphs</strong>, i.e., for any given pair of vertices V<sub>1</sub> and V<sub>2</sub> ∈ <strong>V</strong>, there always exists a path between these two vertices. The last graph is the <strong>Weighted Graph</strong>. Here, the edges are given "weights". To understand a Weighted Graph, you can think of the vertices as cities and the edges as the distance between them (so they will have some value). You could be asked the shortest path between two cities. So in the context of a Weighted graph, the shortest path may not be the one with least edges. One must keep that in mind.
-                Now, we will look at the way the graphs are implemented. There are mainly two ways to implement graphs, they are -
-                
+                <p>
+                    All the graphs which we have discussed till now are <strong>Simple Graphs</strong>, they do not contain any loops. The ones which do contain loops are
+                    <strong>Non-Simple</strong>. A given graph <strong>G</strong> can be drawn in any way as long as the sets <strong>V</strong> and <strong>E</strong> remain
+                    the same. Such a graph is shown in the figure. The same graph is just drawn differently, they both have the same set of vertices and edges. Such graphs are
+                    called as <strong>Isomorphic Graphs</strong>, as the name suggests "iso" means "same", "morphic" means "shape", the graphs which have the same shape.
+                    All these Graphs are <strong>Connected Graphs</strong>, i.e., for any given pair of vertices V<sub>1</sub> and V<sub>2</sub> ∈ <strong>V</strong>, there
+                    always exists a path between these two vertices. The last graph is the <strong>Weighted Graph</strong>. Here, the edges are given "weights". To understand a
+                    Weighted Graph, you can think of the vertices as cities and the edges as the distance between them (so they will have some value). You could be asked the
+                    shortest path between two cities. So in the context of a Weighted graph, the shortest path may not be the one with least edges. One must keep that in mind.
+                    Now, we will look at the way the graphs are implemented. There are mainly two ways to implement graphs, they are -
+                </p>                
                 <ul class="browser-default">
                     <li>Adjacency Matrix</li>
                     <li>Adjacency List</li>
                 </ul>
-
                 <h4>Adjacency Matrix</h4>
-                
-                It is a very simple representation where we take a two-dimensional matrix of the size <strong>|V| × |V|</strong>, i.e., the declaration in C would look like,
-
-                <br><br>
-                <code class="language-java">int AdjacencyMatrix[V + 1][V + 1];</code>
-                <br><br>
-
-                As the arrays are zero-indexed, we generally prefer to keep the sizes <code class="language-java">V + 1</code>.Now, initially all the values would be zeroes. We put '1' in an element of the two-dimensional array, <code class="language-java">AdjacencyMatrix[i][j]</code>, if there exists an edge between <code>V<sub>i</sub> → V<sub>j</sub></code>. Remember, arrays are zero-indexed. Let us take an example to understand this,
-
+                <p>
+                    It is a very simple representation where we take a two-dimensional matrix of the size <strong>|V| × |V|</strong>, i.e., the declaration in C would look like,
+                </p>
+                <code class="language-java">
+                    int AdjacencyMatrix[V + 1][V + 1];
+                </code>
+                <p>
+                    As the arrays are zero-indexed, we generally prefer to keep the sizes <code class="language-java">V + 1</code>.Now, initially all the values would be zeroes.
+                    We put '1' in an element of the two-dimensional array, <code class="language-java">AdjacencyMatrix[i][j]</code>, if there exists an edge between
+                    <code>V<sub>i</sub> → V<sub>j</sub></code>. Remember, arrays are zero-indexed. Let us take an example to understand this,
+                </p>
                 <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg">
-                    <img class="wp-image-36 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency Matrix" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg" alt="Adjacency Matrix" width="656" height="2063" />
+                    <img class="responsive-img" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency Matrix" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph3.jpg" alt="Adjacency Matrix" width="656" height="2063" />
                 </a>
-
-                I hope it is clear from the example, how we can represent the graph using an Adjacency Matrix. It is very easy to code. All you have to do is create a two-dimensional matrix and assign the values, so, I won't post the code, but if you have any doubts regarding the code, feel free to comment them. The Adjacency Matrix has its pros and cons which we will discuss shortly.
-                
+                <p>
+                    I hope it is clear from the example, how we can represent the graph using an Adjacency Matrix. It is very easy to code. All you have to do is create a two-dimensional
+                    matrix and assign the values, so, I won't post the code, but if you have any doubts regarding the code, feel free to comment them. The Adjacency Matrix has its pros
+                    and cons which we will discuss shortly.
+                </p>
                 <h4>Adjacency List</h4>
-                
-                It is an array of pointers of size <strong>|V| + 1</strong>, where each pointer points to a linked list. The linked list holds the nodes which are adjacent to the <strong>i<sup>th</sup></strong> vertex. By adjacent, we mean those vertices that can be accessed from i<sup>th</sup> node by making a single move. It is a little complex implementation if you are uncomfortable with linked lists. But it is this implementation that we will use for Graph Search Algorithms. This is because we can easily and efficiently know which of the vertices of <strong>V</strong> are neighbours of a given vertex. And that is what you want, if your are to do a Graph Search. Now, let us take an example to understand the concept of Adjacency Lists.
-
+                <p>
+                    It is an array of pointers of size <strong>|V| + 1</strong>, where each pointer points to a linked list. The linked list holds the nodes which are adjacent to the
+                    <strong>i<sup>th</sup></strong> vertex. By adjacent, we mean those vertices that can be accessed from i<sup>th</sup> node by making a single move. It is a little complex
+                    implementation if you are uncomfortable with linked lists. But it is this implementation that we will use for Graph Search Algorithms. This is because we can easily and
+                    efficiently know which of the vertices of <strong>V</strong> are neighbours of a given vertex. And that is what you want, if your are to do a Graph Search. Now, let us take
+                    an example to understand the concept of Adjacency Lists.
+                </p>
                 <a href="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph4.jpg">
-                    <img class="wp-image-37 size-full" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency List" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph4.jpg" alt="Adjacency List" width="905" height="1066" />
+                    <img class="responsive-img" style="margin-top: 10px; margin-bottom: 10px;" title="Adjacency List" src="http://theoryofprogramming.com/wp-content/uploads/2014/12/graph4.jpg" alt="Adjacency List" width="905" height="1066" />
                 </a>
-
-                I hope the sketch has made it clear as to how we use the Adjacency List to implement a Graph. As I mentioned before, it is one of the most versatile implementations of the Graph Data Structure. Now, try to code the implementation in C, or any language you like. Please try this at least once by yourself so that you can get brain deep into the Graph Data Structure. It is only a linked list. And one more thing, don't get confused between pointer-to-an-array and array-of-pointers...! So, if we put the value of <strong>|V| + 1</strong> in a variable '<em>vertices</em>', now the declaration of our Adjacency List would be,
-
-                <br><br>
-                [code language="cpp"]
-                struct node * adjacency_list[vertices];
-                [/code]
-                <br><br>
-
-                Remember this is an "array of pointers", the declaration for "pointer to an array" would look like,
-
-                <br><br>
-                [code language="cpp"]
-                struct node (* adjcency_list)[vertices];
-                [/code]
-                <br><br>
-
-                This is due to operator precedence. Some people make mistakes here, so, watch out! If you want to code in C++, we can have a vector where each element of the vector can hold another vector or a list, so, the declaration would be, like,
-
-                <br><br>
-                [code language="cpp"]
-                vector< list< int > > adjacencyList(vertices + 1);
-                [/code]
-                <br><br>
-
-                Try to code for an hour or two... If you don't get the code, it's ok...! I've put my C code below. Those who got the code right... You are fabulous...! ;) ... But please take a minute to go through my code, I might have written a slightly better code than yours.
-
+                <p>
+                    I hope the sketch has made it clear as to how we use the Adjacency List to implement a Graph. As I mentioned before, it is one of the most versatile implementations of the
+                    Graph Data Structure. Now, try to code the implementation in C, or any language you like. Please try this at least once by yourself so that you can get brain deep into the
+                    Graph Data Structure. It is only a linked list. And one more thing, don't get confused between pointer-to-an-array and array-of-pointers...! So, if we put the value of
+                    <strong>|V| + 1</strong> in a variable '<em>vertices</em>', now the declaration of our Adjacency List would be,
+                </p>
+                <code class="language-cpp">
+                    struct node * adjacency_list[vertices];
+                </code>
+                <p>
+                    Remember this is an "array of pointers", the declaration for "pointer to an array" would look like,
+                </p>
+                <code class="language-cpp">
+                    struct node (* adjcency_list)[vertices];
+                </code>
+                <p>
+                    This is due to operator precedence. Some people make mistakes here, so, watch out! If you want to code in C++, we can have a vector where each element of the vector can hold
+                    another vector or a list, so, the declaration would be, like,
+                </p>
+                <code class="language-cpp">
+                    vector< list< int > > adjacencyList(vertices + 1);
+                </code>
+                <p>
+                    Try to code for an hour or two... If you don't get the code, it's ok...! I've put my C code below. Those who got the code right... You are fabulous...! ;) ... But please take
+                    a minute to go through my code, I might have written a slightly better code than yours.
+                </p>
                 <ul class="tabs">
                     <li class="tab col s3"><a href="#adjacency-list-c">C</a></li>
                     <li class="tab col s3"><a href="#adjacency-list-cpp-stl">C++ STL</a></li>
@@ -270,7 +297,6 @@
                 </div>
 
                 <h4>Other implementations of Adjacency List</h4>
-                
                 <ul class="browser-default">
                     <li><strong><a href="http://theoryofprogramming.com/adjacency-list-using-cpp-stl/">Adjacency List using C++ STL</a></strong></li>
                     <li><strong><a href="http://theoryofprogramming.com/adjacency-list-in-java/">Adjacency List in Java</a></strong></li>
@@ -278,7 +304,6 @@
                 </ul>
                 
                 <h4>Comparison between Adjacency Matrix and Adjacency List -</h4>
-
                 <table class="bordered highlight">
                     <thead>
                         <tr>
@@ -305,14 +330,13 @@
                         </tr>
                     </tbody>
                 </table>
-
-                <br><br>
-                &nbsp;
-
-                With the knowledge of Adjacency Matrix and Adjacency List alone you won't be able to do the competitive programming questions, because you do not know how to explore your graph to get the desired result. For this, you need to know the <strong><a href="http://theoryofprogramming.com/2014/12/25/graph-theory-breadth-first-search/">Breadth First Search (BFS) Algorithm</a></strong> and the <strong><a href="http://theoryofprogramming.com/2014/12/26/graph-theory-depth-first-search/">Depth First Search (DFS) Algorithm</a></strong>. This post is only to give an introduction. Feel free to comment your doubts..! Keep practising.... Happy Coding...! :)
-                <br><br>
+                <p>
+                    With the knowledge of Adjacency Matrix and Adjacency List alone you won't be able to do the competitive programming questions, because you do not know how to explore your graph to
+                    get the desired result. For this, you need to know the <strong><a href="http://theoryofprogramming.com/2014/12/25/graph-theory-breadth-first-search/">Breadth First Search (BFS)
+                    Algorithm</a></strong> and the <strong><a href="http://theoryofprogramming.com/2014/12/26/graph-theory-depth-first-search/">Depth First Search (DFS) Algorithm</a></strong>. This post
+                    is only to give an introduction. Feel free to comment your doubts..! Keep practising.... Happy Coding...! :)
+                </p>
             </div>
-            <div class="col m1 l1 hide-on-small-only"></div>
         </div>
         <!-- facebook comments plugin -->
         <br>
