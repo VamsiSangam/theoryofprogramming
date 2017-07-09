@@ -1,5 +1,8 @@
 Theory of Programming
 ----
+
+## GitHub pages branch under development! No PR or issues related to `gh-pages` please
+
 This is the GitHub code repository for the educational website [Theory of Programming](http://theoryofprogramming.com/). Theory of Programming is a website for computer science geeks who want to learn data structures, algorithms, Java, C, etc. The codes in this repository are the codes which are displayed in the website's posts.
 
 ### Contributing
