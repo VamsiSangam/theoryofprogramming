@@ -26,14 +26,14 @@ int jumpSearch(int arr[], int n, int value)
 
     if (value <= arr[i]) {
         // right is i if search value is less than
-        // any jumped element in the array. If not, right is last element
+        // any jumped element in the array.
         right = i;
-    }
-    else {
+    } else {
+        // If not, right is last element
         right = n;
     }
 
-    left = max(right - jump, 0);    // ensuring left dosen't go negaitive
+    left = max(right - jump, 0);    // ensuring left doesn't go negative
 
     // Linear search backwards
     while (right >= left)
@@ -46,7 +46,7 @@ int jumpSearch(int arr[], int n, int value)
 int main()
 {
     int arr[] = {1, 3, 5, 7, 9, 11, 13, 15};
-    int n = sizeof(arr)/sizeof(int);
+    int n = sizeof(arr) / sizeof(int);
 
     cout << jumpSearch(arr, n, 0) << endl; // -1
     cout << jumpSearch(arr, n, 3) << endl; // 1
