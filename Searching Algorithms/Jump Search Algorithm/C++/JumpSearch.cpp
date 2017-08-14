@@ -10,6 +10,7 @@ Code Contributor - Praveen Mylavarapu (saipraveen.ml)
 ===== ===== ===== */
 
 #include <iostream>
+#include <algorithm>
 #include <math.h>
 
 using namespace std;
@@ -18,18 +19,21 @@ int jumpSearch(int arr[], int n, int value)
 {
     int i, right, left, jump = (int) sqrt(n);
 
-    // Keep jumping until value is between any two elements of the array or when i goes out of bound
-    for (i = 0; i + jump < n && arr[i] < value; i += jump);
+    for (i = 0; i + jump < n && arr[i] < value; i += jump) {
+        // Keep jumping until value is between any two
+        // elements of the array or when i goes out of bound
+    }
 
-    if (value <= arr[i])    // right is i if search value is less than any jumped element in the array. If not, right is last element
+    if (value <= arr[i]) {
+        // right is i if search value is less than
+        // any jumped element in the array. If not, right is last element
         right = i;
-    else
+    }
+    else {
         right = n;
+    }
 
-    left = right - jump;
-
-    if (left < 0)   // ensuring left dosen't go negaitive
-        left = 0;
+    left = max(right - jump, 0);    // ensuring left dosen't go negaitive
 
     // Linear search backwards
     while (right >= left)
@@ -41,7 +45,8 @@ int jumpSearch(int arr[], int n, int value)
 
 int main()
 {
-    int arr[] = {1, 3, 5, 7, 9, 11, 13, 15}, n = sizeof(arr)/sizeof(int);
+    int arr[] = {1, 3, 5, 7, 9, 11, 13, 15};
+    int n = sizeof(arr)/sizeof(int);
 
     cout << jumpSearch(arr, n, 0) << endl; // -1
     cout << jumpSearch(arr, n, 3) << endl; // 1
