@@ -11,7 +11,7 @@ Code Contributor - Praveen Mylavarapu (saipraveen.ml)
 
 #include <iostream>
 #include <algorithm>
-#include <math.h>
+#include <cmath>
 
 using namespace std;
 
@@ -36,9 +36,11 @@ int jumpSearch(int arr[], int n, int value)
     left = max(right - jump, 0);    // ensuring left doesn't go negative
 
     // Linear search backwards
-    while (right >= left)
-        if (arr[right--] == value)
+    while (right >= left) {
+        if (arr[right--] == value) {
             return right + 1;
+        }
+    }
 
     return -1;
 }
