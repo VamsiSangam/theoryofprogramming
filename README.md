@@ -1,3 +1,8 @@
+# Please Note
+
+Thanks a lot for your interest in this repo! This repo will soon get shifted to suitable repository under the newly formed [Theory of Programming](https://github.com/TheoryOfProgramming/) organisation. Please watch out for that page. No further pull requests will be accepted for this repo.
+
+---
 Theory of Programming
 ----
 This is the GitHub code repository for the educational website [Theory of Programming](http://theoryofprogramming.com/). Theory of Programming is a website for computer science geeks who want to learn data structures, algorithms, Java, C, etc. The codes in this repository are the codes which are displayed in the website's posts.
