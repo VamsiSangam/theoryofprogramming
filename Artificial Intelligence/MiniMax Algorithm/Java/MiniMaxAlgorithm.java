@@ -12,103 +12,134 @@ Code Contributor - Vamsi Sangam
 import java.util.Scanner;
 
 public class MiniMaxAlgorithm {
-    static int N = 3;
-    static int X = 1;
-    static int O = -1;
+    static int X = 1;   // Player who always maximises score
+    static int O = -1;  // Player who always minimizes score
+    static int E = 0;   // Value which denotes an empty space
 
     public static void main(String[] args) {
+        int N = 3;
         int[][] game = new int[N][N];
         Scanner in = new Scanner(System.in);
+        int currentPlayer = O;
         
         System.out.println("Play TicTacToe! You are X!");
-        printGame(game);
         
-        for (int turn = 1; turn <= N * N; ++turn) {
-            if (turn % 2 == 1) {    // User's turn -> X's turn
-                System.out.println("Your turn! Input 2 integers, row and colum (1 indexed) -");
-                int row, col;
-                
-                row = in.nextInt() - 1;
-                col = in.nextInt() - 1;
-                
-                game[row][col] = X;
-            } else {    // Computer's turn -> O's turn
-                System.out.println("Computer's turn!");
-                MiniMaxResult computersMove = minimax(game, false);
-                
-                game[computersMove.row][computersMove.column] = O;
-            }
-            
+        
+        while (true) {
             printGame(game);
             
-            if (hasPlayerWon(game, X)) {
-                System.out.println("X has won! Game over!");
-                return;
+            if (currentPlayer == X) {
+                System.out.println("It is X's turn. Enter row and column (1 indexed) -");
+                
+                int row = in.nextInt() - 1;
+                int col = in.nextInt() - 1;
+                
+                if (game[row][col] == E) {
+                    game[row][col] = X;
+                    currentPlayer = O;
+                } else {
+                    System.out.println("Entered row and column is already played!");
+                }
+            } else {    // Player O's turn
+                System.out.println("It is O's turn.");
+                computeAndPlayBestMove(game, O);
+                currentPlayer = X;
             }
             
-            if (hasPlayerWon(game, O)) {
-                System.out.println("O has won! Game over!");
-                return;
+            if (isTerminalState(game)) {
+                break;
             }
         }
         
-        System.out.println("It is a draw!");
+        if (hasPlayerWon(game, X)) {
+            System.out.println("Player X has won!");
+        } else if (hasPlayerWon(game, O)) {
+            System.out.println("Player O has won!");
+        } else {
+            System.out.println("It is a draw!");
+        }
     }
     
-    public static MiniMaxResult minimax(int[][] game, boolean isXTurn) {
-        if (hasPlayerWon(game, X)) {
-            return new MiniMaxResult(10, -1, -1);
+    // Minimax algorithm entry method. Uses minTurn() and maxTurn() to
+    // compute the best move for the current player and plays that move
+    public static void computeAndPlayBestMove(int[][] game, int player) {
+        Result result;
+        
+        if (player == X) {
+            result = maxTurn(game, 0);
+        } else {
+            result = minTurn(game, 0);
         }
         
-        if (hasPlayerWon(game, O)) {
-            return new MiniMaxResult(-10, -1, -1);
+        Move bestMove = result.move;
+        
+        game[bestMove.i][bestMove.j] = player;
+    }
+    
+    // Method to compute best move for player X (maximising player)
+    // Recursively calls minTurn()
+    static Result maxTurn(int[][] game, int depth) {
+        if (isTerminalState(game)) {
+            return new Result(score(game, depth), null);
         }
         
-        MiniMaxResult bestMove = new MiniMaxResult(isXTurn ? Integer.MIN_VALUE : Integer.MAX_VALUE, -1, -1);
+        Result max = new Result(Integer.MIN_VALUE, new Move(-1, -1));
         
         for (int i = 0; i < game.length; ++i) {
             for (int j = 0; j < game[i].length; ++j) {
-                if (game[i][j] == 0) {  // an empty move
-                    game[i][j] = isXTurn ? X : O;   // play this move
+                if (game[i][j] == E) {
+                    game[i][j] = X;
                     
                     // Recurse for other moves
-                    MiniMaxResult currentMove = new MiniMaxResult(minimax(game, !isXTurn).score, i, j);
+                    Result currentMove = minTurn(game, depth + 1);
                     
-                    // If this is best move, store the row, col and score
-                    if ((isXTurn && currentMove.score > bestMove.score) || (!isXTurn && currentMove.score < bestMove.score)) {
-                        bestMove = currentMove;
+                    if (currentMove.score > max.score) {
+                        max.score = currentMove.score;
+                        max.move.i = i;
+                        max.move.j = j;
                     }
                     
-                    // Revert this move
-                    game[i][j] = 0;
+                    game[i][j] = E;
                 }
             }
         }
         
-        if (bestMove.row == -1) {
-            // there was no best move, which means there was
-            // probably no move left to play, which is a draw
-            return new MiniMaxResult(0, -1, -1) ;
-        }
-        
-        return bestMove;
+        return max;
     }
     
-    public static void printGame(int[][] game) {
-        System.out.println("\nState of TicTacToe game -");
+    // Method to compute best move for player O (minimising player)
+    // Recursively calls maxTurn()
+    static Result minTurn(int[][] game, int depth) {
+        if (isTerminalState(game)) {
+            return new Result(score(game, depth), null);
+        }
+        
+        Result min = new Result(Integer.MAX_VALUE, new Move(-1, -1));
+        
         for (int i = 0; i < game.length; ++i) {
             for (int j = 0; j < game[i].length; ++j) {
-                if (game[i][j] == X) {
-                    System.out.print("X ");
-                } else if (game[i][j] == O) {
-                    System.out.print("O ");
-                } else {
-                    System.out.print("_ ");
+                if (game[i][j] == E) {
+                    game[i][j] = O;
+                    
+                    // Recurse for other moves
+                    Result currentMove = maxTurn(game, depth + 1);
+                    
+                    if (currentMove.score < min.score) {
+                        min.score = currentMove.score;
+                        min.move.i = i;
+                        min.move.j = j;
+                    }
+                    
+                    game[i][j] = E;
                 }
             }
-            
-            System.out.println();
         }
+        
+        return min;
+    }
+    
+    static boolean isTerminalState(int[][] game) {
+        return hasPlayerWon(game, X) || hasPlayerWon(game, O) || hasGameEnded(game);
     }
     
     public static boolean hasPlayerWon(int[][] game, int player) {
@@ -145,24 +176,63 @@ public class MiniMaxAlgorithm {
         return isDiagonalEqual | isAntiDiagonalEqual;
     }
     
-    public static int score(int[][] game) {
+    public static int score(int[][] game, int depth) {
         if (hasPlayerWon(game, X)) {
-            return 10;
+            return 10 - depth;
         } else if (hasPlayerWon(game, O)) {
-            return -10;
+            return depth - 10;
         }
         
         return 0;
     }
+    
+    static boolean hasGameEnded(int[][] game) {
+        for (int i = 0; i < game.length; ++i) {
+            for (int j = 0; j < game[i].length; ++j) {
+                if (game[i][j] == E) {
+                    return false;
+                }
+            }
+        }
+        
+        return true;
+    }
+    
+    public static void printGame(int[][] game) {
+        System.out.println("\nState of TicTacToe game -");
+        for (int i = 0; i < game.length; ++i) {
+            for (int j = 0; j < game[i].length; ++j) {
+                if (game[i][j] == X) {
+                    System.out.print("X ");
+                } else if (game[i][j] == O) {
+                    System.out.print("O ");
+                } else {
+                    System.out.print("_ ");
+                }
+            }
+            
+            System.out.println();
+        }
+    }
 }
 
-class MiniMaxResult
+class Result
 {
-    int score, row, column;
-    
-    public MiniMaxResult(int score, int row, int column) {
+    int score;
+    Move move;
+
+    public Result(int score, Move move) {
         this.score = score;
-        this.row = row;
-        this.column = column;
+        this.move = move;
+    }
+}
+
+class Move
+{
+    int i, j;
+
+    public Move(int i, int j) {
+        this.i = i;
+        this.j = j;
     }
 }
