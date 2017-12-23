@@ -58,6 +58,8 @@ public class MiniMaxAlgorithm {
         } else {
             System.out.println("It is a draw!");
         }
+
+        printGame(game);
     }
     
     // Minimax algorithm entry method. Uses minTurn() and maxTurn() to
