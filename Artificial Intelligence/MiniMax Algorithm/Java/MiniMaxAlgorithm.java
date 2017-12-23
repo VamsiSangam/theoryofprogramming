@@ -20,7 +20,7 @@ public class MiniMaxAlgorithm {
         int N = 3;
         int[][] game = new int[N][N];
         Scanner in = new Scanner(System.in);
-        int currentPlayer = O;
+        int currentPlayer = X;
         
         System.out.println("Play TicTacToe! You are X!");
         
