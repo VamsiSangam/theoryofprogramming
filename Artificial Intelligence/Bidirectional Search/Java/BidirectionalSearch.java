@@ -2,7 +2,7 @@
 
 Theory of Programming
 
-- Bi-Directional Search
+- Bidirectional Search
 Website - http://theoryofprogramming.com/2018/01/21/bidirectional-search/
 Github - https://github.com/VamsiSangam/theoryofprogramming
 
