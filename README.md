@@ -17,6 +17,6 @@ To get an idea where to start, browse the [issues](https://github.com/VamsiSanga
 * Your code must strictly follow the [coding conventions](https://github.com/VamsiSangam/theoryofprogramming/blob/master/CONVENTIONS.md).
 
 ### Contact
-You can [raise a new issue](https://github.com/VamsiSangam/theoryofprogramming/issues/new) if you want to ask questions. Feel free to use the issues as a forum. Alternatively, but less preferably, contact me by mail ```vamsisangam@live.com```.
+You can [raise a new issue](https://github.com/VamsiSangam/theoryofprogramming/issues/new) if you want to ask questions. Feel free to use the issues as a forum.
 
 Happy Coding! :sunglasses:
