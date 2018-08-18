@@ -2,110 +2,131 @@
 
 Theory of Programming
 
-Adjacency List using Collections API
-http://theoryofprogramming.com/2014/12/24/graph-theory-basics/
+Adjacency List
 GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */
 
-import java.util.LinkedList;
 import java.util.Scanner;
-import javafx.util.Pair;
 
-public class AdjacencyList {
-    private final LinkedList< Pair<Integer, Integer> >[] adjacencyList;
-    
-    // Constructor
-    public AdjacencyList(int vertices) {
-        adjacencyList = (LinkedList< Pair<Integer, Integer> >[]) new LinkedList[vertices];
-        
-        for (int i = 0; i < adjacencyList.length; ++i) {
-            adjacencyList[i] = new LinkedList<>();
-        }
-    }
-    
-    // Appends a new Edge to the linked list
-    public void addEdge(int startVertex, int endVertex, int weight) {
-        adjacencyList[startVertex].add(new Pair<>(endVertex + 1, weight));
-    }
-    
-    // Returns number of vertices
-    // Does not change for an object
-    public int getNumberOfVertices() {
-        return adjacencyList.length;
-    }
-    
-    // Returns number of outward edges from a vertex
-    public int getNumberOfEdgesFromVertex(int startVertex) {
-        return adjacencyList[startVertex].size();
-    }
-    
-    // Returns a copy of the Linked List of outward edges from a vertex
-    public LinkedList< Pair<Integer, Integer> > getEdgesFromVertex(int startVertex) {
-        LinkedList< Pair<Integer, Integer> > edgeList
-                            = (LinkedList< Pair<Integer, Integer> >) new LinkedList(adjacencyList[startVertex]);
-        
-        return edgeList;
-    }
-    
-    // Prints the Adjaency List
-    public void printAdjacencyList() {
-        int i = 0;
-        
-        for (LinkedList< Pair<Integer, Integer> > list : adjacencyList) {
-            System.out.print("adjacencyList[" + (i + 1) + "] -> ");
-            
-            for (Pair<Integer, Integer> edge : list) {
-                System.out.print(edge.getKey() + "(" + edge.getValue() + ") ");
-            }
-            
-            ++i;
-            System.out.println();
-        }
-    }
-    
-    // Removes an edge and returns true if there
-    // was any change in the collection, else false
-    public boolean removeEdge(int startVertex, Pair<Integer, Integer> edge) {
-        return adjacencyList[startVertex - 1].remove(edge);
-    }
-    
-    public boolean hasEdge(int startVertex, int endVertex, int weight) {
-        return adjacencyList[startVertex].contains(new Pair<>(endVertex, weight));
+class Node
+{
+    /**
+     * vertex - destination vertex of the edge
+     * weight - weight of the edge
+     * next - next node of the linked list
+     */
+    int vertex, weight;
+    Node next;
+
+    public Node(int vertex, int weight) {
+        this.vertex = vertex;
+        this.weight = weight;
     }
 }
 
-class TestGraph
+class AdjacencyListDemo
 {
-    public static void main(String[] args) {
-        Scanner s = new Scanner(System.in);
+    public static void main(String[] args)
+    {
+        int vertices, edges, v1, v2, w;
+        Scanner in = new Scanner(System.in);
         
-        int vertices = s.nextInt();
-        int edges = s.nextInt();
-        int u, v, weight;
+        System.out.print("Enter the number of vertices - ");
+        vertices = in.nextInt();
+        System.out.print("Enter the number of edges - ");
+        edges = in.nextInt();
         
-        AdjacencyList adjacencyList = new AdjacencyList(vertices);
+        // Creating Adjacency List. Size is made |V| + 1 to
+        // use the array by 1-indexing, for simplicity
+        Node[] adjacencyList = new Node[vertices + 1];
         
-        int i = 0;
+        System.out.println("Enter " + edges + " edges. Three integers v1, v2, w -");
         
-        while (i < edges) {
-            u = s.nextInt() - 1;
-            v = s.nextInt() - 1;
-            weight = s.nextInt();
+        for (int i = 0; i < edges; ++i) {
+            // Scanning edge v1 -> v2 of weight 'w'
+            v1 = in.nextInt();
+            v2 = in.nextInt();
+            w = in.nextInt();
             
-            adjacencyList.addEdge(u, v, weight);
-            ++i;
+            // Adding edge v1 -> v2
+            adjacencyList[v1] = addEdge(adjacencyList[v1], new Node(v2, w));
+            
+            // To add edge v2 -> v1, uncomment line below
+            // adjacencyList[v2] = addEdge(adjacencyList[v2], v1, w);
         }
         
-        System.out.println("The Adjacency List -");
-        adjacencyList.printAdjacencyList();
+        // Printing adjacency list
+        print(adjacencyList);
         
-        System.out.println("Remove - " + adjacencyList.removeEdge(2, new Pair<>(3, 2)));
+        System.out.println("Input the edge to delete. Three integers v1, v2, w -");
+        v1 = in.nextInt();
+        v2 = in.nextInt();
+        w = in.nextInt();
         
-        System.out.println("The Adjacency List -");
-        adjacencyList.printAdjacencyList();
+        adjacencyList[v1] = deleteEdge(adjacencyList[v1], new Node(v2, w));
+        print(adjacencyList);
+    }
+    
+    /**
+     * Adds a new node in the linked list. Follows head insertion for O(1) performance.
+     * 
+     * @param oldHead head of the linked list to which new node is to be added
+     * @param newEdge new edge to be added
+     * @return new head of the linked list
+     */
+    public static Node addEdge(Node oldHead, Node newEdge)
+    {
+        // Add the new node to the start of linked list
+        newEdge.next = oldHead;
         
-        System.out.println(adjacencyList.hasEdge(2, 3, 2));
+        return newEdge;
+    }
+    
+    public static Node deleteEdge(Node adjacencyList, Node edgeToBeRemoved)
+    {
+        Node head = adjacencyList;
+        
+        // Checking if head is edgeToBeRemoved
+        if (head != null && head.vertex == edgeToBeRemoved.vertex && head.weight == edgeToBeRemoved.weight) {
+            return head.next;
+        }
+        
+        Node trav = head;
+        
+        while (trav != null) {
+            Node travNext = trav.next;
+
+            if (travNext != null) {
+                // check of travNext is equal to edgeToBeRemoved
+
+                if (travNext.vertex == edgeToBeRemoved.vertex && travNext.weight == edgeToBeRemoved.weight) {
+                    // Remove travNext node
+                    trav.next = travNext.next;
+                    return head;
+                }
+            }
+            
+            trav = travNext;
+        }
+        
+        return head;
+    }
+    
+    public static void print(Node[] adjacencyList)
+    {
+        for (int i = 1; i < adjacencyList.length; ++i) {
+            Node trav = adjacencyList[i];
+            
+            System.out.print("adjacencyList[" + i + "] -> ");
+            
+            while (trav != null) {
+                System.out.print(trav.vertex + "(" + trav.weight + ") -> ");
+                trav = trav.next;
+            }
+            
+            System.out.println("NULL");
+        }
     }
 }
