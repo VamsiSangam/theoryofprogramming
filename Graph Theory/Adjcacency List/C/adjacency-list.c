@@ -21,8 +21,7 @@ struct Edge {
 // Returns address of head which is the newly created node.
 struct Edge * addEdge(struct Edge * currentHead, int newVertex)
 {
-    struct Edge * newHead 
-				 = (struct Edge *) malloc(sizeof(struct Edge));
+    struct Edge * newHead = (struct Edge *) malloc(sizeof(struct Edge));
  
     newHead->vertex = newVertex;
     newHead->next = currentHead;
@@ -55,8 +54,8 @@ int main()
         // Adding edge v1 --> v2
         adjacencyList[v1] = addEdge(adjacencyList[v1], v2);
 		
-		// Adding edge v2 --> v1
-		// Remove this if you want a Directed Graph
+        // Adding edge v2 --> v1
+        // Remove this if you want a Directed Graph
         adjacencyList[v2] = addEdge(adjacencyList[v2], v1);
     }
  
