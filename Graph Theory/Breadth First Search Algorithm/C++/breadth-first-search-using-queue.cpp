@@ -8,108 +8,123 @@ GitHub - https://github.com/VamsiSangam/theoryofprogramming
 Code Contributor - Vamsi Sangam
 
 ===== ===== ===== */
- 
+
 #include <cstdio>
 #include <vector>
 #include <list>
 #include <utility>
- 
+
 using namespace std;
- 
+
+void printPathFromSourceToDestination(int parent[], int destination)
+{
+    if (parent[destination] == -1) {
+        // We have reached the source vertex
+        printf("%d -> ", destination);
+    } else {
+        printPathFromSourceToDestination(parent, parent[destination]);
+        printf("%d -> ", destination);
+    }
+}
+
 void breadthFirstSearch(vector<list<int> > adjacencyList, int parent[], int level[], int start)
 {
     list<int>::iterator itr;
- 
+
+    // Level of start vertex will be 0, the level of all its adjcent
+    // vertices will be 1, their adjacent vertices will be 2, and so on
     level[start] = 0;
-    // We start from node - 1
-	// So, Node - 1 is at level 0
-	// All immediate neighbours are at
-	// level 1 and so on.
- 
-    list<int> VertexQueue;    // Queue of vertices to be processed
- 
-    VertexQueue.push_back(start);
-    // Start processing with the
-    // starting vertex
- 
-    while (!VertexQueue.empty())    // While there are vertices to be processed
+
+    list<int> queue; // Queue of vertices to be processed
+
+    queue.push_back(start); // Add start vertex to the queue
+
+    while (!queue.empty()) // While there are vertices to be processed
     {
-        int newVertex = VertexQueue.front();
-        // The first vertex in queue
+        // Get the first vertex in the queue.
+        // Note - .front() does not remove the front element.
+        int newVertex = queue.front();
  
+        // Iterator to explore all the vertices adjacent to it
         itr = adjacencyList[newVertex].begin();
-        // To explore all the vertices adjacent to it
  
         while (itr != adjacencyList[newVertex].end()) {
-            if (level[*itr] == -1) {            // This is an unvisited vertex
-                level[*itr] = level[newVertex] + 1;         // Set level
-                parent[*itr] = newVertex;       // Set parent
-                VertexQueue.push_back(*itr);    // Add it to the queue
+            if (level[*itr] == -1) {                // Check if it is an unvisited vertex
+                level[*itr] = level[newVertex] + 1; // Set level of adjacent vertex
+                parent[*itr] = newVertex;           // Set parent of adjacent vertex
+                queue.push_back(*itr);              // Add the adjacent vertex to queue
             }
+
             ++itr;
         }
- 
-        VertexQueue.pop_front();    // Pop out the processed vertex
+
+        queue.pop_front(); // Pop out the processed vertex
     }
 }
  
 int main()
 {
-    int vertices, edges, v1, v2, weight;
- 
+    int vertices, edges, v1, v2, weight, source, destination;
+
     printf("Enter the Number of Vertices -\n");
     scanf("%d", &vertices);
- 
+
     printf("Enter the Number of Edges -\n");
     scanf("%d", &edges);
- 
-    // Adjacency List is a vector of lists.
+
+    // Creating an Adjacency List which is a vector of list of ints
     vector< list<int> > adjacencyList(vertices + 1);
- 
-    printf("Enter the Edges V1 -> V2\n");
- 
+
+    printf("Enter the Edges V1 <-> V2\n");
+
     for (int i = 1; i <= edges; ++i) {
         scanf("%d%d", &v1, &v2);
- 
-        // Adding Edges
+
+        // Adding Edges (this will be an undirected graph)
         adjacencyList[v1].push_back(v2);
+        adjacencyList[v2].push_back(v1);
     }
- 
+
     printf("\nThe Adjacency List-\n");
+
     // Printing Adjacency List
     for (int i = 1; i < adjacencyList.size(); ++i) {
         printf("adjacencyList[%d] ", i);
- 
+
         list<int>::iterator itr = adjacencyList[i].begin();
- 
+
         while (itr != adjacencyList[i].end()) {
             printf(" -> %d", *itr);
             ++itr;
         }
         printf("\n");
     }
- 
+
     int parent[vertices + 1];
-    // Each element of Parent Array holds the Node value of its parent
     int level[vertices + 1];
-    // Each element of Level Array holds the Level value of that node
- 
+
+    // Initialising our arrays
     for (int i = 0; i <= vertices; ++i) {
-        //Initialising our arrays
-        parent[i] = 0;
+        parent[i] = -1;
         level[i] = -1;
     }
- 
+
     printf("\nEnter the Starting Vertex -\n");
-    scanf("%d", &v1);
- 
-    breadthFirstSearch(adjacencyList, parent, level, v1);
- 
-    // Level Array
+    scanf("%d", &source);
+
+    breadthFirstSearch(adjacencyList, parent, level, source); // Main BFS method
+
+    // Print level and parent arrays
     printf("\nLevel and Parent Arrays -\n");
     for (int i = 1; i <= vertices; ++i) {
-        printf("Level of Node %d is %d, Parent is %d\n", i, level[i], parent[i]);
+        printf("Level of Vertex %d is %d, Parent is %d\n", i, level[i], parent[i]);
     }
- 
+
+    printf("\nEnter any destination vertex to print the shortest path from Vertex %d-\n", source);
+    scanf("%d", &destination);
+
+    printPathFromSourceToDestination(parent, destination);
+    printf("\n");
+
     return 0;
 }
