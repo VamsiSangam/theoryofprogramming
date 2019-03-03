@@ -19,10 +19,10 @@ using namespace std;
 
 void replaceEdgeFor6PreceedingVertices(vector< list<int> >& adjacencyList, int startVertex, int oldEdge, int newEdge)
 {
-	// For the 6 vertices preceeding 'startVertex' do the edge replacement
-	for (int i = startVertex - 1; i >= startVertex - 6 && i > 0; --i) {
-		std::replace(adjacencyList[i].begin(), adjacencyList[i].end(), oldEdge, newEdge);
-	}
+    // For the 6 vertices preceeding 'startVertex' do the edge replacement
+    for (int i = startVertex - 1; i >= startVertex - 6 && i > 0; --i) {
+        std::replace(adjacencyList[i].begin(), adjacencyList[i].end(), oldEdge, newEdge);
+    }
 }
 
 void printPathFromSourceToDestination(int parent[], int destination)
@@ -73,7 +73,6 @@ void breadthFirstSearch(vector< list<int> > adjacencyList, int parent[], int lev
  
 int main()
 {
-    // int vertices, edges, v1, v2, weight, source, destination;
     int vertices = 100;
 
     // Creating an Adjacency List of size 100
@@ -83,34 +82,34 @@ int main()
     // the 6 possible moves from each vertex.
     for (int i = 1; i <= vertices; ++i) {
         for (int j = i + 1; j <= i + 6 && j <= vertices; ++j) {
-        	adjacencyList[i].push_back(j);
-		}
+            adjacencyList[i].push_back(j);
+        }
     }
-    
+
     char temp; // To scan space between integers
     int numOfLadders, numOfSnakes;
-    
+
     printf("Enter number of ladders -\n");
     scanf("%d", &numOfLadders);
     printf("Enter the ladder which goes from V1 -> V2\n");
-    
+
     for (int i = 1; i <= numOfLadders; ++i) {
-    	int v1, v2;
-    	
-    	scanf("%d%c%d", &v1, &temp, &v2);
-    	replaceEdgeFor6PreceedingVertices(adjacencyList, v1, v1, v2);
-	}
-	
-	printf("Enter number of snakes -\n");
-	scanf("%d", &numOfSnakes);
+        int v1, v2;
+
+        scanf("%d%c%d", &v1, &temp, &v2);
+        replaceEdgeFor6PreceedingVertices(adjacencyList, v1, v1, v2);
+    }
+
+    printf("Enter number of snakes -\n");
+    scanf("%d", &numOfSnakes);
     printf("Enter the snake which goes from V1 -> V2\n");
-    
+
     for (int i = 1; i <= numOfSnakes; ++i) {
-    	int v1, v2;
-    	
-    	scanf("%d%c%d", &v1, &temp, &v2);
-    	replaceEdgeFor6PreceedingVertices(adjacencyList, v1, v1, v2);
-	}
+        int v1, v2;
+
+        scanf("%d%c%d", &v1, &temp, &v2);
+        replaceEdgeFor6PreceedingVertices(adjacencyList, v1, v1, v2);
+    }
 
     printf("\nThe Adjacency List-\n");
 
