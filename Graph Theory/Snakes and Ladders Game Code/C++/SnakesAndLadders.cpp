@@ -98,6 +98,9 @@ int main()
 
         scanf("%d%c%d", &v1, &temp, &v2);
         replaceEdgeFor6PreceedingVertices(adjacencyList, v1 /* startVertex */, v1 /* oldEdge */, v2 /* newEdge */);
+
+        // Edges associated with v1 can be removed
+        adjacencyList[v1].clear();
     }
 
     printf("Enter number of snakes -\n");
@@ -109,6 +112,9 @@ int main()
 
         scanf("%d%c%d", &v1, &temp, &v2);
         replaceEdgeFor6PreceedingVertices(adjacencyList, v1 /* startVertex */, v1 /* oldEdge */, v2 /* newEdge */);
+
+        // Edges associated with v1 can be removed
+        adjacencyList[v1].clear();
     }
 
     printf("\nThe Adjacency List-\n");
