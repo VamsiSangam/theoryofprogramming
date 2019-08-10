@@ -2,6 +2,10 @@ Theory of Programming
 ----
 This is the GitHub code repository for the educational website [Theory of Programming](http://theoryofprogramming.com/). Theory of Programming is a website for computer science geeks who want to learn data structures, algorithms, Java, C, etc. The codes in this repository are the codes which are displayed in the website's posts.
 
+### Theory of Programming on Youtube!
+
+Theory of Programming is shifting to YouTube. Visit [the YouTube channel](https://www.youtube.com/channel/UC2Q7RDQeRlmcJtZh4RnOyUg) for awesome tutorial videos! Hope you will support the YouTube channel as you have greatly supported the website. :blush:
+
 ### Contributing
 You can contribute to Theory of Programming by -
 * Providing implementations of algorithms and data structures in other languages than which already exist. Allowed languages are C, C++, Java, C# and Python.
