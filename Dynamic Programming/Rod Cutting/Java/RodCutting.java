@@ -10,7 +10,7 @@ Code Contributor - Vamsi Sangam
 
 import java.util.HashMap;
 
-public class RodCutting {
+class RodCutting {
 
     public static void main(String[] args) {
         // price[0] is cost for length  = 0, for simiplicity
