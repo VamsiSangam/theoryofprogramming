@@ -1,0 +1,123 @@
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Snakes_Ladders {
+
+    public static void replaceEdgeFor6PreceedingVertices(LinkedList<Integer> adj[], int startVertex, int oldEdge, int newEdge) {
+        for (int i = startVertex - 1; i >= startVertex - 6 && i > 0; --i) {
+            adj[i].set(adj[i].indexOf(oldEdge), newEdge);
+        }
+    }
+
+    public static void breadthFirstSearch(LinkedList<Integer> adjacencyList[], int parent[], int level[], int start) {
+        Iterator<Integer> itr;
+
+        // Level of start vertex will be 0, the level of all its adjcent
+        // vertices will be 1, their adjacent vertices will be 2, and so on
+        level[start] = 0;
+
+        LinkedList<Integer> queue = new LinkedList<>();
+
+        queue.add(start); // Add start vertex to the queue
+
+        while (!queue.isEmpty()) // While there are vertices to be processed
+        {
+            // Get the first vertex in the queue.
+            // Note - .front() does not remove the front element.
+            int newVertex = queue.poll();
+
+            // Iterator to explore all the vertices adjacent to it
+            itr = adjacencyList[newVertex].listIterator();
+
+            while (itr.hasNext()) {
+                int ele = itr.next();
+                if (level[ele] == -1) {                // Check if it is an unvisited vertex
+                    level[ele] = level[newVertex] + 1; // Set level of adjacent vertex
+                    parent[ele] = newVertex;           // Set parent of adjacent vertex
+                    queue.add(ele);              // Add the adjacent vertex to queue
+                }
+
+            }
+        }
+    }
+
+    public static void printPathFromSourceToDestination(int parent[], int destination) {
+        if (parent[destination] == -1) {
+            // We have reached the source vertex
+            System.out.println(destination + "->");
+        } else {
+            printPathFromSourceToDestination(parent, parent[destination]);
+            System.out.println(destination + "->");
+        }
+    }
+
+    public static void main(String[] args) {
+        int vertices = 100;
+        LinkedList<Integer> adj[] = new LinkedList[vertices + 1];
+        //
+        for (int i = 1; i <= vertices; ++i) {
+            adj[i] = new LinkedList<>();
+            for (int j = i + 1; j <= i + 6 && j <= vertices; ++j) {
+                adj[i].addFirst(j);
+            }
+        }
+
+        int numOfLadders, numOfSnakes;
+
+        System.out.println("Enter number of ladders");
+        Scanner kb = new Scanner(System.in);
+        numOfLadders = kb.nextInt();
+        System.out.println("Enter number of Snakes");
+        numOfSnakes = kb.nextInt();
+        kb.nextLine();
+        System.out.println("Enter the ladder which goes from V1 -> V2");
+        for (int i = 1; i <= numOfLadders; ++i) {
+            int v1, v2;
+            String temp = kb.nextLine();
+            String[] ar = temp.split(" ");
+            v1 = Integer.parseInt(ar[0]);
+            v2 = Integer.parseInt(ar[1]);
+            replaceEdgeFor6PreceedingVertices(adj, v1, v1, v2);
+            // Edges associated with v1 can be removed
+            adj[v1].clear();
+        }
+        System.out.println("Enter the Snake which goes from V1 -> V2");
+        for (int i = 1; i <= numOfSnakes; ++i) {
+            int v1, v2;
+            String temp = kb.nextLine();
+            String[] ar = temp.split(" ");
+            v1 = Integer.parseInt(ar[0]);
+            v2 = Integer.parseInt(ar[1]);
+            replaceEdgeFor6PreceedingVertices(adj, v1, v1, v2);
+            // Edges associated with v1 can be removed
+            adj[v1].clear();
+        }
+        System.out.println("The Adjacency List-");
+
+        // Printing Adjacency List
+        for (int i = 1; i < adj.length; ++i) {
+            System.out.println("adjacencyList[" + i + "]");
+            Iterator<Integer> it = adj[i].listIterator();
+            while (it.hasNext()) {
+                System.out.print(it.next() + " ");
+            }
+            System.out.println("");
+        }
+        int parent[] = new int[vertices + 1];
+        int level[] = new int[vertices + 1];
+
+        // Initialising our arrays
+        for (int i = 0; i <= vertices; ++i) {
+            parent[i] = -1;
+            level[i] = -1;
+        }
+        breadthFirstSearch(adj, parent, level, 1);
+        System.out.println("Minimum number of moves required to finish the game = " + level[100]);
+
+        // Print path from Vertex 1 to Vertex 100
+        System.out.println("Shortest path to finish the game = ");
+        printPathFromSourceToDestination(parent, 100);
+
+    }
+}
